@@ -16,7 +16,7 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <h2 className="text-3xl underline">Portfolio with NextJS</h2>
+        <h2 className="text-3xl underline">Portfolio With NextJS</h2>
 
         <p className={styles.description}>
           Get started by editing{" "}
