@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import NavbarMobile from "../components/Navbar/NavbarMobile";
 import Timeline from "../components/Timeline/Timeline";
-import styles from "../styles/Home.module.css";
+import Card from "../components/Card/Card";
 
 export default function Home() {
   return (
@@ -38,6 +38,10 @@ export default function Home() {
           obcaecati omnis quidem praesentium eos ullam consectetur.
         </div>
         <Timeline />
+        <div className="flex flex-wrap">
+          <Card />
+          <Card />
+        </div>
       </main>
     </div>
   );

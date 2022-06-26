@@ -8,7 +8,7 @@ interface TimelineProps {
 
 const Timeline = ({ date, title, content }: TimelineProps) => {
   return (
-    <div className="antialiased p-6 bg-gray-100 text-gray-800 mb-48">
+    <div className="antialiased p-6 bg-gray-100 text-gray-800">
       <div className="relative container mx-auto px-6 flex flex-col space-y-8">
         <div className="absolute z-0 inset-0 left-21 bg-white h-full w-2 shadow-md rounded-2xl md:mx-auto md:left-0 md:right:0"></div>
         <div className="relative z-10">
