@@ -5,6 +5,7 @@ import Timeline from "../components/Timeline/Timeline";
 import Card from "../components/Card/Card";
 import Footer from "../components/Footer/Footer";
 import NavbarDesktop from "../components/Navbar/NavbarDesktop";
+import Button from "../components/Buttons/Button";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <NavbarMobile />
       <main className="px-4 lg:px-0 m-auto max-w-3xl">
         <NavbarDesktop />
+
         <div className="sm:pt-0 pt-16">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
           dicta consequatur mollitia cumque autem quidem in, quod suscipit? Esse
@@ -30,11 +32,16 @@ export default function Home() {
           Blanditiis dicta consequatur mollitia cumque autem quidem in, quod
           suscipit?
         </div>
+
         <Timeline />
+
         <div className="flex flex-wrap">
           <Card />
           <Card />
         </div>
+
+        <Button>visit site</Button>
+
         <Footer />
       </main>
     </div>
