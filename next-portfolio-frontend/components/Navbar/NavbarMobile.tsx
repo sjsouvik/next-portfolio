@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { navData } from "./data";
 
@@ -10,7 +11,7 @@ const NavbarMobile = () => {
   };
 
   return (
-    <div
+    <nav
       className={`${
         showMenu ? "top-0 bottom-0" : ""
       } z-50 fixed w-full bg-white shadow-md sm:hidden`}
@@ -35,7 +36,7 @@ const NavbarMobile = () => {
         </div>
         {showMenu && <NavbarContent />}
       </div>
-    </div>
+    </nav>
   );
 };
 
@@ -44,10 +45,12 @@ const NavbarContent = () => {
     <div className="w-full mt-4 flex justify-center">
       <ul className="flex flex-col">
         {navData.map((data) => {
-          const { name } = data;
+          const { name, route, component } = data;
           return (
-            <li key={name} className="list-none">
-              {name}
+            <li key={name} className="list-none m-4 text-xl font-bold">
+              <Link href={route}>
+                <a>{component}</a>
+              </Link>
             </li>
           );
         })}

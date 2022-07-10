@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import NavbarMobile from "../components/Navbar/NavbarMobile";
 import Timeline from "../components/Timeline/Timeline";
 import Card from "../components/Card/Card";
