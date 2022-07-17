@@ -17,21 +17,26 @@ const NavbarMobile = () => {
       } z-50 fixed w-full bg-white shadow-md sm:hidden`}
     >
       <div className="flex flex-col">
-        <div className="w-full flex justify-end p-4" onClick={handleMenu}>
+        <div className="flex p-4" onClick={handleMenu}>
           {showMenu ? (
-            <Image
-              src="https://img.icons8.com/material-outlined/24/undefined/delete-sign.png"
-              height="20"
-              width="20"
-              alt="close"
-            />
+            <div className="flex-1 text-right">
+              <Image
+                src="https://img.icons8.com/material-outlined/24/undefined/delete-sign.png"
+                height="20"
+                width="20"
+                alt="close"
+              />
+            </div>
           ) : (
-            <Image
-              src="https://img.icons8.com/material-outlined/24/undefined/menu--v3.png"
-              height="20"
-              width="20"
-              alt="menu"
-            />
+            <div className="flex flex-1">
+              <div className="flex-1 text-center">Souvik Jana</div>
+              <Image
+                src="https://img.icons8.com/material-outlined/24/undefined/menu--v3.png"
+                height="20"
+                width="20"
+                alt="menu"
+              />
+            </div>
           )}
         </div>
         {showMenu && <NavbarContent />}
