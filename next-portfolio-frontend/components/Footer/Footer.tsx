@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="flex flex-col space-y-8 bottom-0 py-4 md:space-y-0 md:flex-row">
+    <footer className="flex flex-col space-y-8 bottom-0 py-4 pr-4 lg:pr-0 max-w-4xl md:space-y-0 md:flex-row">
       <div className="flex-1 text-center md:text-left">
         {`Let's Connect! I'd love if you reach out to me on any of the
           platforms below. Drop me a message and I’ll get back to you ASAP!`}

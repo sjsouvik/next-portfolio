@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import LinkButton from "../Buttons/LinkButton";
 import Tags from "../Tags/Tags";
 
@@ -43,7 +42,7 @@ const Card = () => {
             order info will be sent to the database.
           </div>
           <div className="flex space-x-4">
-            <LinkButton href="https://next-portfolio-beta-ebon.vercel.app/">
+            <LinkButton href="https://souvikjana.vercel.app/">
               Visit Site
             </LinkButton>
             <LinkButton href="https://github.com/sjsouvik/next-portfolio/tree/next-portfolio-frontend">
