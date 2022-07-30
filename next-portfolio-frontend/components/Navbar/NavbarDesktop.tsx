@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { navData } from "./data";
 
 const NavbarDesktop = () => {
   return (
@@ -6,26 +7,13 @@ const NavbarDesktop = () => {
       <nav className="flex py-6 justify-between items-center">
         <div>Souvik Jana</div>
         <ul className="flex space-x-8">
-          <li>
-            <Link href="/">
-              <a className="navbar__item">Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/about">
-              <a className="navbar__item">About</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <a className="navbar__item">Projects</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <a className="navbar__item">Work</a>
-            </Link>
-          </li>
+          {navData.map(({ name, component, route }) => (
+            <li key={name} className="navbar__item">
+              <Link href={route}>
+                <a>{component}</a>
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
