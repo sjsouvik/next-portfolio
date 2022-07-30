@@ -65,4 +65,10 @@ a {
     bottom: 0;
     height: 150px;
   }
+
+  .line__clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }

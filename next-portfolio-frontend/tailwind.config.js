@@ -18,8 +18,13 @@ module.exports = {
         21: "84px",
         34: "140px",
       },
+
       padding: {
         34: "149px",
+      },
+
+      maxWidth: {
+        12: "200px",
       },
     },
   },

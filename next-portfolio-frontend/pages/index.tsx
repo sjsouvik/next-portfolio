@@ -1,9 +1,9 @@
-import Button from "../components/Buttons/Button";
-import Card from "../components/Card/Card";
-import Layout from "../components/Layout/Layout";
-import Timeline from "../components/Timeline/Timeline";
+import { getFeaturedProjects } from "../common/utils";
+import { Button, Card, Layout, Timeline } from "../components/index";
 
 export default function Home() {
+  const featuredProjects = getFeaturedProjects();
+
   return (
     <Layout>
       <div>
@@ -16,8 +16,9 @@ export default function Home() {
       <Timeline />
 
       <div className="flex flex-wrap">
-        <Card />
-        <Card />
+        {featuredProjects.map((project) => (
+          <Card key={project.title} {...project} />
+        ))}
       </div>
 
       <Button>Visit Site</Button>

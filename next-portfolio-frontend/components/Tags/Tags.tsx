@@ -1,9 +1,13 @@
 import React from "react";
 
-const Tags = ({ tags }) => {
+interface TagsProps {
+  tags: Array<string>;
+}
+
+const Tags = ({ tags }: TagsProps) => {
   return (
     <ul className="flex flex-wrap items-center">
-      {tags.map((tag: string) => {
+      {tags?.slice(0, 6).map((tag: string) => {
         return (
           <li
             key={tag}
