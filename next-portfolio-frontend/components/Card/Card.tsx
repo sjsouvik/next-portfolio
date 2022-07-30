@@ -15,7 +15,7 @@ const Card = (props: CardProps) => {
   const { imageLink, title, content, tags, demoLink, sourceLink } = props;
 
   return (
-    <div className="p-4 md:w-1/2">
+    <div className="p-4 w-full md:w-1/2">
       <div className="flex flex-col h-full shadow-md border border-gray-200 rounded-md">
         <div>
           <Image
