@@ -10,25 +10,12 @@ interface IndividualSkillProps {
   skillsArray: Array<string>;
 }
 
-const Skills = ({ skillsData }: SkillsProps) => {
-  return (
-    <>
-      <h1 className="text-2xl uppercase font-bold py-8">Skills</h1>
-      <ul>
-        {Object.keys(skillsData).map((type) => (
-          <SkillType key={type} skillsData={skillsData} type={type} />
-        ))}
-      </ul>
-    </>
-  );
-};
-
 const IndividualSkill = ({ skillsArray }: IndividualSkillProps) => {
   return (
     <>
       {skillsArray.map((skill) => {
         return (
-          <li className="mx-6" key={skill}>
+          <li className="mx-6 my-1 text-gray-500" key={skill}>
             {skill}
           </li>
         );
@@ -39,12 +26,22 @@ const IndividualSkill = ({ skillsArray }: IndividualSkillProps) => {
 
 const SkillType = ({ skillsData, type }: SkillTypeProps) => {
   return (
-    <div key={type} className="ml-4 py-4">
-      <h2 className="text-lg">{type}</h2>
+    <div key={type} className="py-6 border-b border-dashed border-gray-500">
+      <h2 className="text-xl">{type}</h2>
       <ul className="list-disc flex flex-wrap">
         <IndividualSkill skillsArray={skillsData[type]} />
       </ul>
     </div>
+  );
+};
+
+const Skills = ({ skillsData }: SkillsProps) => {
+  return (
+    <ul>
+      {Object.keys(skillsData).map((type) => (
+        <SkillType key={type} skillsData={skillsData} type={type} />
+      ))}
+    </ul>
   );
 };
 
