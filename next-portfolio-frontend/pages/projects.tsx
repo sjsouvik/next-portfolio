@@ -18,8 +18,8 @@ const Projects = () => {
 
   return (
     <Layout>
-      <div className="flex flex-col justify-between lg:flex-row">
-        <ul className="flex flex-1 flex-wrap">
+      <div className="flex flex-col justify-between lg:flex-row mb-24">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 mr-4 flex-1">
           {filteredProjects.map((project) => (
             <Card key={project.title} {...project} />
           ))}

@@ -1,27 +1,35 @@
 import { getFeaturedProjects } from "../common/utils";
-import { Button, Card, Layout, Timeline } from "../components/index";
+import { timeLineData } from "../common/data";
+import {
+  Card,
+  Layout,
+  Timeline,
+  HeroHeader,
+  SectionHeading,
+} from "../components";
 
 export default function Home() {
   const featuredProjects = getFeaturedProjects();
 
   return (
     <Layout>
-      <div>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt rem nobis
-        iusto nulla repudiandae ipsum! Nesciunt rerum ratione voluptatem, velit
-        at aliquid nisi distinctio sapiente fugiat? Hic fugiat assumenda
-        exercitationem!
-      </div>
+      <HeroHeader />
 
-      <Timeline />
-
-      <div className="flex flex-wrap">
+      <SectionHeading
+        heading="Featured Projects"
+        description="I enjoy to continue learning to improve my knowledge and to gain a completely new experience. You'll see some of the frontend & backend projects I've accomplished."
+      />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 mb-24">
         {featuredProjects.map((project) => (
           <Card key={project.title} {...project} />
         ))}
       </div>
 
-      <Button>Visit Site</Button>
+      <SectionHeading
+        heading="Work Experience"
+        description="Work experience so far."
+      />
+      <Timeline timeline={timeLineData.experience} />
     </Layout>
   );
 }

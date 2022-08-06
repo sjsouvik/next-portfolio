@@ -1,8 +1,18 @@
 export const timeLineData = {
   experience: [
     {
-      date: "20 May 2020",
-      title: "Internship",
+      date: "September 2021",
+      company: "Thoughtworks",
+      title: "UI Developer",
+      content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+              nesciunt alias. Cumque velit sequi deleniti blanditiis nesciunt
+              incidunt accusamus tempore mollitia illo laudantium eveniet
+              veritatis, eum delectus asperiores, dolorem quibusdam?`,
+    },
+    {
+      date: "April 2018 - September 2021",
+      company: "IBM India Pvt Ltd",
+      title: "Application Developer",
       content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
               nesciunt alias. Cumque velit sequi deleniti blanditiis nesciunt
               incidunt accusamus tempore mollitia illo laudantium eveniet
