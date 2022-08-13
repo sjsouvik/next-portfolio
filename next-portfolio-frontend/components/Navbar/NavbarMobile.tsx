@@ -55,11 +55,13 @@ const NavbarContent = ({ onToggle }: NavbarContentProps) => {
     <div className="w-full mt-4 flex justify-center">
       <ul className="flex flex-col">
         {navData.map((data) => {
-          const { name, route, component } = data;
+          const { name, route, component, target } = data;
           return (
             <li key={name} className="list-none m-4 text-xl font-bold">
               <Link href={route}>
-                <a onClick={onToggle}>{component}</a>
+                <a onClick={onToggle} target={target}>
+                  {component}
+                </a>
               </Link>
             </li>
           );
