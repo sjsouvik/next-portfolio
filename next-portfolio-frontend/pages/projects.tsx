@@ -1,23 +1,27 @@
 import React, { useState } from "react";
-import {
-  getAllProjects,
+import {  
   getFilteredProjectsBasedOnTag,
   getTagsFromAllProjects,
+  pluralize,
 } from "../common/utils";
-import { Card, Layout } from "../components";
+import { Card, Layout, SectionHeading } from "../components";
 
 const Projects = () => {
-  const [filteredProjects, setFilteredProjects] = useState(() =>
-    getAllProjects()
-  );
+  const [selectedTag, setSelectedTag] = useState("");  
 
-  const handleTagClick = (tagName: string) => {
-    const filteredProjectsBasedOnTag = getFilteredProjectsBasedOnTag(tagName);
-    setFilteredProjects(filteredProjectsBasedOnTag);
+  const handleTagClick = (tagName: string) => {    
+    setSelectedTag((prevSelectedTag) => prevSelectedTag === tagName ? '': tagName);    
   };
+  
+  const filteredProjects = getFilteredProjectsBasedOnTag(selectedTag);
+
+  const filteredProjectsLength = filteredProjects.length;
+  const projectText = pluralize(filteredProjectsLength, "project");
+  const headingText = `${filteredProjectsLength} ${projectText} tagged with ${selectedTag}`;
 
   return (
     <Layout>
+      {selectedTag && <SectionHeading heading={headingText}/>}
       <div className="flex flex-col justify-between lg:flex-row mb-24">
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 mr-4 flex-1">
           {filteredProjects.map((project) => (
@@ -30,7 +34,7 @@ const Projects = () => {
             {getTagsFromAllProjects().map(([tagName, tagCount]) => (
               <li
                 key={tagName}
-                className="m-1 text-sm px-3 py-1 border border-gray-500 rounded-full cursor-pointer"
+                className={`m-1 text-sm px-3 py-1 border border-gray-500 rounded-full cursor-pointer hover:bg-blue-600 hover:text-white ${selectedTag === tagName ? 'bg-blue-600 text-white' : ''}`}
                 onClick={() => handleTagClick(tagName)}
               >
                 {tagName}, {tagCount}

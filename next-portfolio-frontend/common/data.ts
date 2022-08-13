@@ -74,16 +74,9 @@ export const cardsData = {
 };
 
 export const skillsData = {
-  Languages: [
-    "Javascript",
-    "Javascript",
-    "Javascript",
-    "Javascript",
-    "Javascript",
-    "Javascript",
-    "Javascript",
-  ],
-  Languages1: ["Javascript", "Javascript"],
+  Languages: ["HTML", "CSS", "Javascript", "TypeScript", "Java"],
+  Libraries: ["ReactJS", "Redux", "Jest", "React Testing Library"],
+  Frameworks: ["NextJS", "NodeJS", "ExpressJS"],
   Languages2: ["Javascript", "Javascript"],
   Languages3: ["Javascript", "Javascript"],
 };
