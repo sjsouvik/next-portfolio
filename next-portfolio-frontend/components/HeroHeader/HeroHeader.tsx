@@ -1,6 +1,7 @@
 import Image from "next/image";
 import LinkButton from "../Buttons/LinkButton";
 import HeroImage from "../../assets/waving-hand.png";
+import Button from "../Buttons/Button";
 
 const HeroHeader = () => {
   return (
@@ -15,8 +16,13 @@ const HeroHeader = () => {
         <LinkButton href="/projects" target="">
           side-projects
         </LinkButton>{" "}
-        and my blog where I post tutorials and things that spark my curiosity.
+        and my{" "}
+        <LinkButton href="https://sjsouvik.medium.com/">blogs</LinkButton> where
+        I post tutorials and things that spark my curiosity.
       </p>
+      <div className="flex justify-center">
+        <Button href="/about">more about me</Button>
+      </div>
     </div>
   );
 };

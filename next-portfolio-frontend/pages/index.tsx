@@ -6,6 +6,7 @@ import {
   Timeline,
   HeroHeader,
   SectionHeading,
+  Button,
 } from "../components";
 
 const Home = () => {
@@ -24,6 +25,9 @@ const Home = () => {
           {featuredProjects.map((project) => (
             <Card key={project.title} {...project} />
           ))}
+        </div>
+        <div className="flex justify-center">
+          <Button href="/projects">View All Projects</Button>
         </div>
       </section>
 
