@@ -3,6 +3,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { navData } from "./data";
 
+interface NavbarContentProps {
+  onToggle: () => void;
+}
+
 const NavbarMobile = () => {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -17,9 +21,9 @@ const NavbarMobile = () => {
       } z-50 fixed w-full bg-white shadow-md sm:hidden`}
     >
       <div className="flex flex-col">
-        <div className="flex p-4" onClick={handleMenu}>
+        <div className="flex p-4">
           {showMenu ? (
-            <div className="flex-1 text-right">
+            <div className="flex-1 text-right" onClick={handleMenu}>
               <Image
                 src="https://img.icons8.com/material-outlined/24/undefined/delete-sign.png"
                 height="20"
@@ -35,17 +39,18 @@ const NavbarMobile = () => {
                 height="20"
                 width="20"
                 alt="menu"
+                onClick={handleMenu}
               />
             </div>
           )}
         </div>
-        {showMenu && <NavbarContent />}
+        {showMenu && <NavbarContent onToggle={handleMenu} />}
       </div>
     </nav>
   );
 };
 
-const NavbarContent = () => {
+const NavbarContent = ({ onToggle }: NavbarContentProps) => {
   return (
     <div className="w-full mt-4 flex justify-center">
       <ul className="flex flex-col">
@@ -54,7 +59,7 @@ const NavbarContent = () => {
           return (
             <li key={name} className="list-none m-4 text-xl font-bold">
               <Link href={route}>
-                <a>{component}</a>
+                <a onClick={onToggle}>{component}</a>
               </Link>
             </li>
           );

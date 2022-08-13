@@ -5,12 +5,14 @@ const NavbarDesktop = () => {
   return (
     <div className="hidden sm:block">
       <nav className="flex py-6 justify-between items-center">
-        <div>Souvik Jana</div>
+        <Link href="/">
+          <a>Souvik Jana</a>
+        </Link>
         <ul className="flex space-x-8">
-          {navData.map(({ name, component, route }) => (
+          {navData.map(({ name, component, route, target }) => (
             <li key={name} className="navbar__item">
               <Link href={route}>
-                <a>{component}</a>
+                <a target={target}>{component}</a>
               </Link>
             </li>
           ))}
