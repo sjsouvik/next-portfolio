@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { navData } from "./data";
 
@@ -51,13 +52,20 @@ const NavbarMobile = () => {
 };
 
 const NavbarContent = ({ onToggle }: NavbarContentProps) => {
+  const router = useRouter();
+
   return (
     <div className="w-full mt-4 flex justify-center">
       <ul className="flex flex-col">
         {navData.map((data) => {
           const { name, route, component, target } = data;
           return (
-            <li key={name} className="list-none m-4 text-xl font-bold">
+            <li
+              key={name}
+              className={`list-none m-4 text-xl font-bold ${
+                router.pathname === route ? "underline underline-offset-4" : ""
+              }`}
+            >
               <Link href={route}>
                 <a onClick={onToggle} target={target}>
                   {component}

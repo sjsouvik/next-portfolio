@@ -150,6 +150,4 @@ export const skillsData = {
   Languages: ["HTML", "CSS", "Javascript", "TypeScript", "Java"],
   Libraries: ["ReactJS", "Redux-toolkit", "Jest", "React Testing Library"],
   Frameworks: ["NextJS", "NodeJS", "ExpressJS"],
-  Languages2: ["Javascript", "Javascript"],
-  Languages3: ["Javascript", "Javascript"],
 };

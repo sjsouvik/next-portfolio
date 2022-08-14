@@ -25,7 +25,7 @@ const Card = (props: CardProps) => {
             height="60px"
             layout="responsive"
             objectFit="cover"
-            className="rounded-t-md"
+            className="rounded-t-md cursor-pointer scale-125 opacity-80 transition-opacity transition-transform duration-500 hover:opacity-100 hover:scale-110"
           />
         </div>
         <div className="flex flex-col p-4 space-y-3 mt-4">
