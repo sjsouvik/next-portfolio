@@ -6,33 +6,29 @@ export const timeLineData = {
       date: "September 2021",
       company: "Thoughtworks",
       title: "UI Developer",
-      content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-              nesciunt alias. Cumque velit sequi deleniti blanditiis nesciunt
-              incidunt accusamus tempore mollitia illo laudantium eveniet
-              veritatis, eum delectus asperiores, dolorem quibusdam?`,
+      content:
+        "Built a system from scratch with authentication, authorization, pagination, history with filters, admin to control all users' access on the systm, user's profile and search where test coverage is > 90% for one of the telecom giants in India.",
     },
     {
       date: "April 2018 - September 2021",
       company: "IBM",
       title: "Application Developer",
-      content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-              nesciunt alias. Cumque velit sequi deleniti blanditiis nesciunt
-              incidunt accusamus tempore mollitia illo laudantium eveniet
-              veritatis, eum delectus asperiores, dolorem quibusdam?`,
+      content:
+        "Extended the dashboard, history, forms features of the application for 3 or more regions globally. Planned and developed web applications that can be used in multiple devices, resulting in better user experience and accessibility.",
     },
   ],
   education: [
     {
       date: "July 2017",
-      title: "B.Tech in Computer Science & Engineering",
+      title: "B.Tech. in Computer Science & Engineering - 8.65 DGPA",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Completed B.Tech. from West Bengal University of Technology, Kolkata.",
     },
     {
       date: "June 2013",
-      title: "12th",
+      title: "12th in Science - 80.8%",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Completed 12th from West Bengal Council of Higher Secondary Education(WBCHSE) board.",
     },
   ],
 };
