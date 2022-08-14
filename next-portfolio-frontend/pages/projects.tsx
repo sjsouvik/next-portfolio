@@ -19,7 +19,7 @@ const Projects = () => {
 
   const filteredProjectsLength = filteredProjects.length;
   const projectText = pluralize(filteredProjectsLength, "project");
-  const headingText = `${filteredProjectsLength} ${projectText} tagged with ${selectedTag}`;
+  const headingText = `${filteredProjectsLength} ${projectText} tagged with "${selectedTag}"`;
 
   return (
     <Layout>

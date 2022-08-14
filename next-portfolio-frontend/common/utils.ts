@@ -14,18 +14,19 @@ export const getAllProjects = () => {
 export const getFilteredProjectsBasedOnTag = (searchTag: string) => {
   const allProjects = getAllProjects();
 
-  if(!searchTag){
+  if (!searchTag) {
     return allProjects;
   }
 
-  return allProjects.filter((project:CardProps) => {    
+  return allProjects.filter((project: CardProps) => {
     return project.tags.some((tag: string) => tag === searchTag);
   });
 };
 
 export const getTagsFromAllProjects = () => {
-  const all = cardsData.projects.all;
-  const result = Object.values(all).reduce((tagsObj, { tags }) => {
+  const allProjects = cardsData.projects.all;
+
+  const result = Object.values(allProjects).reduce((tagsObj, { tags }) => {
     tags.forEach((tag: string) => {
       if (tagsObj[tag]) {
         tagsObj[tag] += 1;
@@ -35,9 +36,10 @@ export const getTagsFromAllProjects = () => {
     });
     return tagsObj;
   }, {} as Record<string, number>);
+
   return Object.entries(result);
 };
 
 export const pluralize = (count: number, query: string) => {
-  return count > 1 ? `${query}s` : query;
+  return count > 1 ? `${query}s are` : `${query} is`;
 };

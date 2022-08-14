@@ -1,3 +1,5 @@
+import Videozen from "../assets/videozen-compressed.png";
+
 export const timeLineData = {
   experience: [
     {
@@ -37,45 +39,120 @@ export const timeLineData = {
 
 export const featuredProjects = {
   p1: {
-    imageLink:
-      "https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    title: "Title",
+    imageLink: Videozen,
+    title: "Videozen",
     content:
-      "A responsive full-stack food order web app built in Next.js, Redux and MongoDB. Users can add items to the cart and place orders. The order info will be sent to the database.",
+      "A video library that has some playlists and videos on web technologies. You can use this to learn web development, create custom playlist, add videos to watch later, check history of watched videos, search videos.",
     tags: [
-      "NextJs",
-      "React",
+      "HTML",
+      "CSS",
       "JavaScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+      "JWT",
     ],
-    demoLink: "https://github.com/Jaynil1611/Enhanced-Portfolio",
-    sourceLink: "https://github.com/Jaynil1611/Enhanced-Portfolio",
+    demoLink: "https://videozen.netlify.app/",
+    sourceLink: "https://github.com/sjsouvik/Videozen/",
   },
   p2: {
     imageLink:
       "https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    title: "Title 2",
-    content: "sfsfd",
-    tags: ["HTML", "CSS"],
-    demoLink: "https://github.com/Jaynil1611/Enhanced-Portfolio",
-    sourceLink: "https://github.com/Jaynil1611/Enhanced-Portfolio",
+    title: "Shopwild",
+    content:
+      "An online shopping app to revolutionize your shopping where you can filter, search items, add items to wishlist, cart and place order.",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+      "JWT",
+      "Jest",
+      "React Testing Library",
+    ],
+    demoLink: "https://shopwild.netlify.app/",
+    sourceLink: "https://github.com/sjsouvik/shopwild",
+  },
+};
+
+export const otherProjects = {
+  p3: {
+    imageLink:
+      "https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    title: "Sharedeck",
+    content:
+      "A Social media application to share your learning, work and experience where you can create posts, follow other people to see their posts, add reacttion to posts.",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "ReactJS",
+      "Redux-toolkit",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+      "JWT",
+    ],
+    demoLink: "https://videozen.netlify.app/",
+    sourceLink: "https://github.com/sjsouvik/Videozen/",
+  },
+  p4: {
+    imageLink:
+      "https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    title: "Quizn",
+    content:
+      "A quiz app that has some quizzes on web technologies. You can use this to test their knowledge of web development.",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+      "JWT",
+    ],
+    demoLink: "https://shopwild.netlify.app/",
+    sourceLink: "https://github.com/sjsouvik/shopwild",
+  },
+  p5: {
+    imageLink:
+      "https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    title: "UI Blocks",
+    content:
+      "A CSS component library that provides simple, accessible UI components for faster web development. I have used this library to build my other web apps.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    demoLink: "https://ui-blocks.netlify.app/",
+    sourceLink: "https://github.com/sjsouvik/UI-Blocks",
+  },
+  p6: {
+    imageLink:
+      "https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    title: "Souvik's portfolio",
+    content:
+      "A portfolio to showcase all his side-projects and blogs at one place with other info.",
+    tags: ["HTML", "CSS", "JavaScript", "NextJS"],
+    demoLink: "https://souvikjana.vercel.app/",
+    sourceLink:
+      "https://github.com/sjsouvik/next-portfolio/tree/next-portfolio-frontend",
   },
 };
 
 export const cardsData = {
   projects: {
     featured: featuredProjects,
-    all: { ...featuredProjects },
+    all: { ...featuredProjects, ...otherProjects },
   },
 };
 
 export const skillsData = {
   Languages: ["HTML", "CSS", "Javascript", "TypeScript", "Java"],
-  Libraries: ["ReactJS", "Redux", "Jest", "React Testing Library"],
+  Libraries: ["ReactJS", "Redux-toolkit", "Jest", "React Testing Library"],
   Frameworks: ["NextJS", "NodeJS", "ExpressJS"],
   Languages2: ["Javascript", "Javascript"],
   Languages3: ["Javascript", "Javascript"],

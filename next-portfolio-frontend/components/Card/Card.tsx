@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import LinkButton from "../Buttons/LinkButton";
 import Tags from "../Tags/Tags";
 
 export interface CardProps {
-  imageLink: string;
+  imageLink: string | StaticImageData;
   title: string;
   content: string;
   tags: Array<string>;
