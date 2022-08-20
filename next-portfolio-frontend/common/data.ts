@@ -129,7 +129,7 @@ export const otherProjects = {
   p6: {
     imageLink:
       "https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    title: "Souvik's portfolio",
+    title: "Souvik's Portfolio",
     content:
       "A portfolio to showcase all his side-projects and blogs at one place with other info.",
     tags: ["HTML", "CSS", "JavaScript", "NextJS"],
@@ -147,7 +147,7 @@ export const cardsData = {
 };
 
 export const skillsData = {
-  Languages: ["HTML", "CSS", "Javascript", "TypeScript", "Java"],
+  Languages: ["HTML", "CSS", "JavaScript", "TypeScript", "Java"],
   Libraries: ["ReactJS", "Redux-toolkit", "Jest", "React Testing Library"],
   Frameworks: ["NextJS", "NodeJS", "ExpressJS"],
 };
