@@ -98,8 +98,8 @@ export const otherProjects = {
       "MongoDB",
       "JWT",
     ],
-    demoLink: "https://videozen.netlify.app/",
-    sourceLink: "https://github.com/sjsouvik/Videozen/",
+    demoLink: "https://sharedeck.netlify.app/",
+    sourceLink: "https://github.com/sjsouvik/Sharedeck",
   },
   p4: {
     imageLink:
@@ -118,8 +118,8 @@ export const otherProjects = {
       "MongoDB",
       "JWT",
     ],
-    demoLink: "https://shopwild.netlify.app/",
-    sourceLink: "https://github.com/sjsouvik/shopwild",
+    demoLink: "https://quizn.netlify.app/",
+    sourceLink: "https://github.com/sjsouvik/Quizn",
   },
   p5: {
     imageLink:
