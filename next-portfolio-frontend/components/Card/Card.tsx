@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import LinkButton from "../Buttons/LinkButton";
 import Tags from "../Tags/Tags";
 
@@ -18,17 +19,21 @@ const Card = (props: CardProps) => {
     <div className="w-full">
       <div className="flex flex-col h-full shadow-md border border-gray-200 rounded-md">
         <div>
-          <Image
-            src={imageLink}
-            alt=""
-            width="100%"
-            height="60px"
-            layout="responsive"
-            objectFit="cover"
-            className="rounded-t-md cursor-pointer scale-125 opacity-80 transition-opacity transition-transform duration-500 hover:opacity-100 hover:scale-110"
-          />
+          <Link href={demoLink}>
+            <a target="_blank">
+              <Image
+                src={imageLink}
+                alt=""
+                width="100%"
+                height="60px"
+                layout="responsive"
+                objectFit="cover"
+                className="rounded-t-md cursor-pointer scale-125 opacity-80 transition-opacity transition-transform duration-500 hover:opacity-100 hover:scale-110"
+              />
+            </a>
+          </Link>
         </div>
-        <div className="flex flex-col p-4 space-y-3 mt-4">
+        <div className="flex flex-col p-4 space-y-3">
           <div className="text-2xl font-bold ">{title}</div>
           <div style={{ minHeight: "55px" }}>
             <Tags tags={tags} />
