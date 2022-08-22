@@ -37,7 +37,7 @@ export const getTagsFromAllProjects = () => {
     return tagsObj;
   }, {} as Record<string, number>);
 
-  return Object.entries(result);
+  return Object.entries(result).sort((a, b) => a[0].localeCompare(b[0]));
 };
 
 export const pluralize = (count: number, query: string) => {

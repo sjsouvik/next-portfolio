@@ -1,3 +1,4 @@
+import { experienceImageURL, educationImageURL } from "./constants";
 import Videozen from "../assets/videozen-compressed.png";
 
 export const timeLineData = {
@@ -8,6 +9,7 @@ export const timeLineData = {
       title: "UI Developer",
       content:
         "Built a system from scratch with authentication, authorization, pagination, history with filters, admin to control all users' access on the systm, user's profile and search where test coverage is > 90% for one of the telecom giants in India.",
+      timelineImageURL: experienceImageURL,
     },
     {
       date: "April 2018 - September 2021",
@@ -15,6 +17,7 @@ export const timeLineData = {
       title: "Application Developer",
       content:
         "Extended the dashboard, history, forms features of the application for 3 or more regions globally. Planned and developed web applications that can be used in multiple devices, resulting in better user experience and accessibility.",
+      timelineImageURL: experienceImageURL,
     },
   ],
   education: [
@@ -23,12 +26,14 @@ export const timeLineData = {
       title: "B.Tech. in Computer Science & Engineering - 8.65 DGPA",
       content:
         "Completed B.Tech. from West Bengal University of Technology, Kolkata.",
+      timelineImageURL: educationImageURL,
     },
     {
       date: "June 2013",
       title: "12th in Science - 80.8%",
       content:
         "Completed 12th from West Bengal Council of Higher Secondary Education(WBCHSE) board.",
+      timelineImageURL: educationImageURL,
     },
   ],
 };

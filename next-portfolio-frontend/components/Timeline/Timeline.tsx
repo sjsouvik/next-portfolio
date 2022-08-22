@@ -5,6 +5,7 @@ interface TimelineData {
   company?: string;
   title: string;
   content: string;
+  timelineImageURL: string;
 }
 
 interface TimelineProps {
@@ -17,14 +18,15 @@ const Timeline = ({ timeline }: TimelineProps) => {
       <div className="relative container mx-auto px-6 flex flex-col space-y-8">
         <div className="absolute z-0 inset-0 left-21 bg-white h-full w-2 shadow-md rounded-2xl md:mx-auto md:left-0 md:right:0"></div>
         {timeline?.map((timelineItem, index) => {
-          const { date, company, title, content } = timelineItem;
+          const { date, company, title, content, timelineImageURL } =
+            timelineItem;
           const isIndexOdd = index % 2 !== 0;
 
           return (
             <div key={date} className="relative z-10">
               <div className="timeline__img p-5">
                 <Image
-                  src="https://img.icons8.com/ios-filled/100/undefined/briefcase.png"
+                  src={timelineImageURL}
                   alt="work"
                   height={96}
                   width={96}
