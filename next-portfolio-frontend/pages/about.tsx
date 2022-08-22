@@ -18,7 +18,7 @@ const About = () => {
           />
         </div>
         <header className="md:ml-8 flex flex-col p-4">
-          <h1 className="text-3xl font-bold pb-4">Hello, I'm Souvik</h1>
+          <h1 className="text-3xl font-bold pb-4">Hello, I am Souvik</h1>
           <p>
             Currently, working as a frontend developer and have been working
             with ReactJS, JavaScript. I would love to explore backend
