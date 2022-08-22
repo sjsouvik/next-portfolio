@@ -18,12 +18,14 @@ const About = () => {
           />
         </div>
         <header className="md:ml-8 flex flex-col p-4">
-          <h1 className="text-3xl font-bold pb-4">Hello I am Creator</h1>
+          <h1 className="text-3xl font-bold pb-4">Hello, I'm Souvik</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-            assumenda, illum architecto numquam non itaque provident voluptate,
-            beatae, quia debitis vitae quasi sapiente animi eius dolorem dolores
-            et deleniti! Ullam!
+            Currently, working as a frontend developer and have been working
+            with ReactJS, JavaScript. I would love to explore backend
+            stuff(Java, Spring boot, etc.) as well after having a decent
+            expertise in frontend technologies. Also, like to share my learnings
+            by writing articles, you can check them out in blogs section of my
+            portfolio.
           </p>
         </header>
       </div>

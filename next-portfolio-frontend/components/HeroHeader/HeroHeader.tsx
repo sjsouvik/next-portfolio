@@ -7,8 +7,9 @@ const HeroHeader = () => {
   return (
     <div className="pt-4 mb-24">
       <h1 className="text-4xl font-extrabold mb-8">
-        Hi! <Image src={HeroImage} width="32px" height="32px" alt="hero" /> I am
-        Souvik Jana.
+        Hi!{" "}
+        <Image src={HeroImage} width="32px" height="32px" alt="waving hand" /> I
+        am Souvik Jana.
       </h1>
       <p className="text-gray-500">
         I want to take my passion, education, and experience to develop
