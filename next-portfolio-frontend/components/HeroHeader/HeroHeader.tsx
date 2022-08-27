@@ -11,9 +11,9 @@ const HeroHeader = () => {
         <Image src={HeroImage} width="32px" height="32px" alt="waving hand" /> I
         am Souvik Jana.
       </h1>
-      <p className="text-gray-500">
+      <p className="text-gray-500 mb-6">
         I want to take my passion, education, and experience to develop
-        websites, webapps and mobile applications. Check out my{" "}
+        websites, webapps. Check out my{" "}
         <LinkButton href="/projects" target="">
           side-projects
         </LinkButton>{" "}
