@@ -32,7 +32,7 @@ const Projects = () => {
             ))}
           </ul>
         </div>
-        <div className="sticky top-0 self-start py-4 lg:p-0 lg:px-0">
+        <div className="sticky top-0 self-start py-4 lg:p-0">
           <h4>Tags</h4>
           <ul className="flex flex-wrap mt-2">
             {getTagsFromAllProjects().map(([tagName, tagCount]) => (
