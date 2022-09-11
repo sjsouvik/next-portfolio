@@ -1,0 +1,200 @@
+---
+title: "JS Objects in depth"
+publishedAt: "2021-07-07"
+tags: ["JavaScript", "Objects"]
+excerpt: "The object is one of the most useful data structures in JavaScript - a collection of associated key/value pairs."
+---
+
+Hello everyone, we would be covering all about JS objects today which would help you to
+
+- make better use of objects while writing programs in JS
+- understand its syntax and different ways to manipulate objects
+
+So, keep reading till the end and I hope you'll learn something from it.
+
+### Objects
+
+The object is one of the most useful data structures in JavaScript - a collection of associated key/value pairs.
+
+### Creating objects
+
+New empty objects can be created in 2 ways:
+
+- literal notation
+- `Object()` constructor function
+
+```javascript
+const myObject = {}; // Using literal notation
+const myObject = new Object(); // Using the Object() constructor function
+```
+
+However, the recommended way to create a new object is to use literal notation as the `Object()` constructor function is a bit slower and verbose.
+
+### Add property to an object
+
+**Dot notation as well as square bracket notation** can be used to add a new property to an object with its value.
+
+```javascript
+const souvik = {};
+
+souvik.learning = true;
+souvik["status"] = "Learning and implementing";
+souvik.work = function () {
+  console.log("Working as Full Stack Web Dev!");
+};
+```
+
+After adding all these properties, the object would look like this:
+
+```javascript
+{
+      learning: true,
+      status: "Learning and implementing",
+      work: function () {
+             console.log("Working as Full Stack Web Dev!");
+      }
+}
+```
+
+### Modify properties of an object
+
+Data within objects are mutable, which means data can be modified.
+
+```javascript
+const souvik = {
+  learning: true,
+  status: "Learning and implementing",
+  work: function () {
+    console.log("Working as Full Stack Web Dev!");
+  },
+};
+```
+
+Feel free to use dot or square bracket notation to modify the value of a property.
+
+```javascript
+souvik.learning = false;
+souvik["status"] = "Building projects";
+```
+
+### Remove property of an object
+
+Since data within objects are mutable, we can delete any property from an object using the `delete` operator.
+
+```javascript
+delete souvik.learning; //true
+```
+
+### Passing arguments
+
+Objects are mutable in JS. So, if you're passing an object to a function or, you're creating a copy of the original object and modifying the value of any property of the object that would modify the value for the original object as in both cases the new copy of the object points to the same reference or memory location. And once we're updating the value of a property, it would reflect in each and every copy of the object.
+
+```javascript
+let originalObject = {
+  status: "online",
+};
+
+function setToOffline(object) {
+  object.status = "offline";
+}
+
+setToOffline(originalObject);
+originalObject.status; // "offline"
+```
+
+On the other hand, the primitive data types(string, boolean, number) are immutable. When we pass a primitive argument, the function creates a local copy of the same which points to a different memory location and performs the operation on it as per the need. In that way, it doesn't update the actual data.
+
+```javascript
+function changeToEight(n) {
+  n = 8; // whatever n was, it is now 8... but only in this function!
+}
+
+let n = 7;
+
+changeToEight(n);
+console.log(n); // 7
+```
+
+### `this` keyword
+
+A method can access the object's properties it was called on using the reserved keyword `this`.
+
+```javascript
+const souvik = {
+  learning: true,
+  status: "Learning",
+  work: function () {
+    console.log(`${this.status} Full Stack Web Dev!`);
+  },
+};
+
+souvik.work(); //Learning Full Stack Web Dev!
+```
+
+In other words, we can also say the `this` keyword helps an object to access and manipulate its own properties. This way of invoking a method using dot operator is known as **Implicit binding** where `this` refers to the object using which the method is invoked.
+
+There're other ways of invoking a method where `this` will point to some other objects using call(), apply() and bind() methods - which is known as **Explicit binding**. To know more read [call, bind and apply in JS](https://sjsouvik.hashnode.dev/call-apply-and-bind-in-js) article.
+
+### `window` object
+
+Now, as we know about the `this` keyword, I have a question for you, what would be the output if we invoke `exploringThis` function?
+
+```javascript
+function exploringThis() {
+  console.log(this);
+}
+
+exploringThis();
+```
+
+In this case or, any regular function `this` points to the global object `window`.
+
+> `window` object is provided by the browser and globally accessible by JS code using the `window` keyword. This object is not part of the JavaScript specification.
+
+Any global variables, functions are accessible as properties of the `window` object.
+
+```javascript
+var learning = "objects in JS";
+
+function work() {
+  console.log("Writing blog on JS objects");
+}
+
+window.learning === learning; //true
+window.work === work; //true
+```
+
+> Only declaring variables with the `var` keyword will add them to the `window` object. If you declare a variable with `let` or `const`, it won't be added as the property to the `window` object.
+
+```javascript
+let learning = "objects in JS";
+
+window.learning === learning; //false
+```
+
+### object methods
+
+The `object()` constructor function that can be used to create a new empty object, has some methods of its own. These methods are:
+
+- `Object.keys(obj)` - this would return an array of keys of the object that is given to it
+- `Object.values(obj)` - similarly, this would return an array of values of the object that is given to it
+
+```javascript
+const souvik = {
+  learning: true,
+  status: "Learning",
+};
+
+Object.keys(souvik); // ["learning", "status"]
+Object.values(souvik); // [true, "Learning"]
+```
+
+These methods are really helpful while you want to do some manipulation with respect to an object's keys or values.
+
+If you want to read more on this, refer [Object MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object), [this keyword MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this), [window object MDN](https://developer.mozilla.org/en-US/docs/Glossary/Global_object).
+
+Thanks for reading till now🙏
+
+Share this blog with your network if you found it useful and feel free to comment if you've any doubts about the topic.
+
+You can connect 👋 with me on [GitHub](https://github.com/sjsouvik), [Twitter](https://twitter.com/sjsouvik), [Linkedin](https://www.linkedin.com/in/souvik-jana)
