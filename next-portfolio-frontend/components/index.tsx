@@ -11,3 +11,4 @@ export { default as Timeline } from "./Timeline/Timeline";
 export { default as HeroHeader } from "./HeroHeader/HeroHeader";
 export { default as SectionHeading } from "./SectionHeading/SectionHeading";
 export { default as BlogCard } from "./Card/BlogCard";
+export type { BlogPost } from "./Card/BlogCard";

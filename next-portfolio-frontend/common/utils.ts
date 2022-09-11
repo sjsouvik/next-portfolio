@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import readingTime from "reading-time";
 
 import { CardProps } from "../components/Card/Card";
+import { BlogPost } from "../components";
 import { cardsData } from "./data";
 
 export const getFeaturedProjects = () => {
@@ -28,21 +29,46 @@ export const getFilteredProjectsBasedOnTag = (searchTag: string) => {
   });
 };
 
+interface Tags {
+  tags: Array<string>;
+}
+const tagsReducer = (tagsObj: Record<string, number>, { tags }: Tags) => {
+  tags.forEach((tag: string) => {
+    if (tagsObj[tag]) {
+      tagsObj[tag] += 1;
+    } else {
+      tagsObj[tag] = 1;
+    }
+  });
+
+  return tagsObj;
+};
+
 export const getTagsFromAllProjects = () => {
   const allProjects = cardsData.projects.all;
 
-  const result = Object.values(allProjects).reduce((tagsObj, { tags }) => {
-    tags.forEach((tag: string) => {
-      if (tagsObj[tag]) {
-        tagsObj[tag] += 1;
-      } else {
-        tagsObj[tag] = 1;
-      }
-    });
-    return tagsObj;
-  }, {} as Record<string, number>);
+  const result = Object.values(allProjects).reduce(tagsReducer, {});
 
   return Object.entries(result).sort((a, b) => a[0].localeCompare(b[0]));
+};
+
+export const getTagsFromAllBlogs = (allBlogPosts: Array<BlogPost>) => {
+  const result = allBlogPosts.reduce(tagsReducer, {});
+
+  return Object.entries(result);
+};
+
+export const getFilteredBlogsBasedOnTag = (
+  allBlogs: Array<BlogPost>,
+  searchTag: string
+) => {
+  if (!searchTag) {
+    return allBlogs;
+  }
+
+  return allBlogs.filter((blog) => {
+    return blog.tags.some((tag: string) => tag === searchTag);
+  });
 };
 
 export const pluralize = (count: number, query: string) => {
@@ -96,7 +122,6 @@ export const getBlogPostData = (id: string) => {
     content,
     frontmatter: {
       id,
-      // excerpt: data.excerpt,
       title: data.title,
       publishedAt: data.publishedAt,
       readingTime: readingTime(fileContents).text,

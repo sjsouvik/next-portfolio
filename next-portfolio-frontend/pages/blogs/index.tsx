@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import {
   getAllBlogPosts,
-  getAllProjects,
-  getFilteredProjectsBasedOnTag,
-  getTagsFromAllProjects,
+  getFilteredBlogsBasedOnTag,
+  getTagsFromAllBlogs,
   pluralize,
 } from "../../common/utils";
 import { BlogCard, Layout, SectionHeading } from "../../components";
@@ -15,20 +14,18 @@ export async function getStaticProps() {
 
 const Blogs = ({ allBlogPosts }) => {
   const [selectedTag, setSelectedTag] = useState("");
-  const [filteredProjects, setFilteredProjects] = useState(() =>
-    getAllProjects()
-  );
 
   const handleTagClick = (tagName: string) => {
-    const tag = selectedTag === tagName ? "" : tagName;
-    setSelectedTag(tag);
-    const filteredProjectsBasedOnTag = getFilteredProjectsBasedOnTag(tag);
-    setFilteredProjects(filteredProjectsBasedOnTag);
+    setSelectedTag((prevSelectedTag) =>
+      prevSelectedTag === tagName ? "" : tagName
+    );
   };
 
-  const filteredLength = filteredProjects.length;
-  const projectText = pluralize(filteredLength, "project");
-  const headingText = `${filteredLength} ${projectText} tagged with ${selectedTag}`;
+  const filteredBlogs = getFilteredBlogsBasedOnTag(allBlogPosts, selectedTag);
+
+  const filteredLength = filteredBlogs.length;
+  const blogText = pluralize(filteredLength, "Blog");
+  const headingText = `${filteredLength} ${blogText} tagged with ${selectedTag}`;
 
   return (
     <Layout>
@@ -44,7 +41,7 @@ const Blogs = ({ allBlogPosts }) => {
         <div className="sticky top-0 self-start py-4 w-full lg:p-0">
           <h4>Tags</h4>
           <ul className="flex flex-wrap mt-2">
-            {getTagsFromAllProjects().map(([tagName, tagCount]) => {
+            {getTagsFromAllBlogs(allBlogPosts).map(([tagName, tagCount]) => {
               const isSelected = selectedTag === tagName;
               return (
                 <li

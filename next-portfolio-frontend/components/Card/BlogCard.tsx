@@ -1,24 +1,24 @@
 import Link from "next/link";
-import React from "react";
 import { Tags } from "../index";
 
-export interface BlogCardProps {
+export interface BlogPost {
   title: string;
   tags: Array<string>;
   readingTime: string;
   publishedAt: string;
   content?: string;
+  excerpt?: string;
   id: string;
 }
 
 const BlogCard = ({
   title,
   tags,
-  // content,
+  excerpt,
   publishedAt,
   readingTime,
   id,
-}: BlogCardProps) => {
+}: BlogPost) => {
   return (
     <Link href={`/blogs/${id}`}>
       <a>
@@ -27,7 +27,7 @@ const BlogCard = ({
             <i className="bx bxs-calendar"></i>
             <span>{publishedAt}</span>
             <i className="ml-3 bx bxs-time-five"></i>
-            <span>{readingTime} read</span>
+            <span>{readingTime}</span>
           </p>
           <h1 className="text-2xl font-bold">{title}</h1>
           <p
@@ -36,7 +36,7 @@ const BlogCard = ({
               WebkitLineClamp: 3,
             }}
           >
-            {"Content"}
+            {excerpt}
           </p>
           <Tags tags={tags} />
         </article>
