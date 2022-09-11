@@ -70,5 +70,10 @@ a {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    -webkit-line-clamp: 3;
+  }
+
+  code {
+    border-radius: 0.5rem;
   }
 }

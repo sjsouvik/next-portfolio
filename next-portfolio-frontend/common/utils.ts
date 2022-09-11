@@ -3,8 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 
-import { CardProps } from "../components/Card/Card";
-import { BlogPost } from "../components";
+import { Project, BlogPost } from "../components";
 import { cardsData } from "./data";
 
 export const getFeaturedProjects = () => {
@@ -24,7 +23,7 @@ export const getFilteredProjectsBasedOnTag = (searchTag: string) => {
     return allProjects;
   }
 
-  return allProjects.filter((project: CardProps) => {
+  return allProjects.filter((project: Project) => {
     return project.tags.some((tag: string) => tag === searchTag);
   });
 };

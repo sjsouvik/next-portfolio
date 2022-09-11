@@ -30,14 +30,7 @@ const BlogCard = ({
             <span>{readingTime}</span>
           </p>
           <h1 className="text-2xl font-bold">{title}</h1>
-          <p
-            className="line__clamp"
-            style={{
-              WebkitLineClamp: 3,
-            }}
-          >
-            {excerpt}
-          </p>
+          <p className="line__clamp">{excerpt}</p>
           <Tags tags={tags} />
         </article>
       </a>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import LinkButton from "../Buttons/LinkButton";
 import Tags from "../Tags/Tags";
 
-export interface CardProps {
+export interface Project {
   imageLink: string | StaticImageData;
   title: string;
   content: string;
@@ -12,7 +12,7 @@ export interface CardProps {
   demoLink?: string;
 }
 
-const Card = (props: CardProps) => {
+const Card = (props: Project) => {
   const { imageLink, title, content, tags, demoLink, sourceLink } = props;
 
   return (
@@ -41,7 +41,6 @@ const Card = (props: CardProps) => {
           <div
             className="text-gray-500 line__clamp flex-1"
             style={{
-              WebkitLineClamp: 3,
               minHeight: "70px",
             }}
           >

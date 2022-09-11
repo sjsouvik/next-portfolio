@@ -137,7 +137,7 @@ export const otherProjects = {
     title: "Souvik's Portfolio",
     content:
       "A portfolio to showcase all his side-projects and blogs at one place with other info.",
-    tags: ["HTML", "CSS", "JavaScript", "NextJS"],
+    tags: ["HTML", "CSS", "JavaScript", "TypeScript", "NextJS"],
     demoLink: "https://souvikjana.vercel.app/",
     sourceLink:
       "https://github.com/sjsouvik/next-portfolio/tree/next-portfolio-frontend",

@@ -66,7 +66,7 @@ const Blog = ({ blogPostData: { source, frontmatter } }) => {
           <i className="ml-3 bx bxs-time-five mt-0.5"></i>
           <span>{frontmatter.readingTime}</span>
         </p>
-        <h1 className="text-3xl font-bold mb-8">{frontmatter.title}</h1>
+        <h1 className="text-4xl font-bold mb-8">{frontmatter.title}</h1>
         <div className="content">
           <MDXRemote {...source} components={{ Image, CodeBlock }} />
         </div>
