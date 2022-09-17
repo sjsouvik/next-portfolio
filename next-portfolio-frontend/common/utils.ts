@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 
-import { Project, BlogPost } from "../components";
+import { Project, BlogPost, TagsProps } from "../components";
 import { cardsData } from "./data";
 
 export const getFeaturedProjects = () => {
@@ -16,22 +16,26 @@ export const getAllProjects = () => {
   return Object.values(all);
 };
 
-export const getFilteredProjectsBasedOnTag = (searchTag: string) => {
-  const allProjects = getAllProjects();
-
+export const getFilteredEntitesBasedOnTag = <T extends Project | BlogPost>(
+  data: Array<T>,
+  searchTag: string
+) => {
   if (!searchTag) {
-    return allProjects;
+    return data;
   }
 
-  return allProjects.filter((project: Project) => {
+  return data.filter((project) => {
     return project.tags.some((tag: string) => tag === searchTag);
   });
 };
 
-interface Tags {
-  tags: Array<string>;
-}
-const tagsReducer = (tagsObj: Record<string, number>, { tags }: Tags) => {
+export const getFilteredProjectsBasedOnTag = (searchTag: string) => {
+  const allProjects = getAllProjects();
+
+  return getFilteredEntitesBasedOnTag(allProjects, searchTag);
+};
+
+const tagsReducer = (tagsObj: Record<string, number>, { tags }: TagsProps) => {
   tags.forEach((tag: string) => {
     if (tagsObj[tag]) {
       tagsObj[tag] += 1;
@@ -60,15 +64,7 @@ export const getTagsFromAllBlogs = (allBlogPosts: Array<BlogPost>) => {
 export const getFilteredBlogsBasedOnTag = (
   allBlogs: Array<BlogPost>,
   searchTag: string
-) => {
-  if (!searchTag) {
-    return allBlogs;
-  }
-
-  return allBlogs.filter((blog) => {
-    return blog.tags.some((tag: string) => tag === searchTag);
-  });
-};
+) => getFilteredEntitesBasedOnTag(allBlogs, searchTag);
 
 export const pluralize = (count: number, query: string) => {
   return count > 1 ? `${query}s are` : `${query} is`;

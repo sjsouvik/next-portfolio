@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import dayjs from "dayjs";
-import { MDXRemote } from "next-mdx-remote";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Head from "next/head";
 import Image from "next/image";
 import { serialize } from "next-mdx-remote/serialize";
 import { getAllBlogPostIds, getBlogPostData } from "../../common/utils";
-import { Layout } from "../../components";
+import { BlogPost, Layout } from "../../components";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
@@ -13,6 +13,20 @@ import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
 import rehypeCodeTitles from "rehype-code-titles";
 import { CodeBlock } from "../../components/mdx-components";
+
+interface GetStaticProps {
+  params: Record<string, string>;
+}
+
+interface BlogProps {
+  blogPostData: {
+    source: MDXRemoteSerializeResult<
+      Record<string, unknown>,
+      Record<string, string>
+    >;
+    frontmatter: BlogPost;
+  };
+}
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -25,7 +39,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: GetStaticProps) {
   const { content, frontmatter } = await getBlogPostData(params.id);
   const mdxSource = await serialize(content, {
     mdxOptions: {
@@ -49,7 +63,11 @@ export async function getStaticProps({ params }) {
   };
 }
 
-const Blog = ({ blogPostData: { source, frontmatter } }) => {
+const Blog = (props: BlogProps) => {
+  const {
+    blogPostData: { source, frontmatter },
+  } = props;
+
   useEffect(() => {
     hljs.initHighlighting();
   }, []);
@@ -67,7 +85,7 @@ const Blog = ({ blogPostData: { source, frontmatter } }) => {
           <span>{frontmatter.readingTime}</span>
         </p>
         <h1 className="text-4xl font-bold mb-8">{frontmatter.title}</h1>
-        <div className="content">
+        <div className="prose max-w-none lg:prose-xl">
           <MDXRemote {...source} components={{ Image, CodeBlock }} />
         </div>
       </div>

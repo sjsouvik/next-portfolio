@@ -5,7 +5,7 @@ import {
   getTagsFromAllBlogs,
   pluralize,
 } from "../../common/utils";
-import { BlogCard, Layout, SectionHeading } from "../../components";
+import { BlogCard, Layout, SectionHeading, TagLayout } from "../../components";
 
 export async function getStaticProps() {
   const allBlogPosts = await getAllBlogPosts();
@@ -33,30 +33,16 @@ const Blogs = ({ allBlogPosts }) => {
         <div className="flex flex-col">
           {selectedTag && <SectionHeading heading={headingText} />}
           <ul className="flex flex-col gap-16 lg:min-w-[42rem] mr-4">
-            {allBlogPosts.map((blogPost) => (
+            {filteredBlogs.map((blogPost) => (
               <BlogCard key={blogPost.title} {...blogPost} />
             ))}
           </ul>
         </div>
-        <div className="sticky top-0 self-start py-4 w-full lg:p-0">
-          <h4>Tags</h4>
-          <ul className="flex flex-wrap mt-2">
-            {getTagsFromAllBlogs(allBlogPosts).map(([tagName, tagCount]) => {
-              const isSelected = selectedTag === tagName;
-              return (
-                <li
-                  key={tagName}
-                  className={`m-1 text-sm px-3 py-1 border border-gray-500 rounded-full cursor-pointer hover:bg-blue-600 hover:text-white ${
-                    isSelected ? "bg-blue-600 text-white" : ""
-                  }`}
-                  onClick={() => handleTagClick(tagName)}
-                >
-                  {tagName}, {tagCount}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <TagLayout
+          data={getTagsFromAllBlogs(allBlogPosts)}
+          handleTagClick={handleTagClick}
+          selectedTag={selectedTag}
+        />
       </div>
     </Layout>
   );
