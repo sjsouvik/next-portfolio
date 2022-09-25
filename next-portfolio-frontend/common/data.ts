@@ -153,6 +153,17 @@ export const cardsData = {
 
 export const skillsData = {
   Languages: ["HTML", "CSS", "JavaScript", "TypeScript", "Java"],
-  Libraries: ["ReactJS", "Redux-toolkit", "Jest", "React Testing Library"],
-  Frameworks: ["NextJS", "NodeJS", "ExpressJS"],
+  Libraries: [
+    "ReactJS",
+    "Redux-toolkit",
+    "MobX",
+    "i18next",
+    "Material UI",
+    "Jest",
+    "React Testing Library",
+    "Mongoose",
+  ],
+  Frameworks: ["NextJS", "Tailwind CSS", "NodeJS", "ExpressJS"],
+  Databases: ["MS Sql Server", "MySQL", "MongoDB"],
+  Tools: ["Git & GitHub"],
 };

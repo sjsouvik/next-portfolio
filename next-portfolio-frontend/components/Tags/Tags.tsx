@@ -11,7 +11,7 @@ const Tags = ({ tags }: TagsProps) => {
         return (
           <li
             key={tag}
-            className="px-1.5 mr-2 mb-1 border-2 rounded-md border-gray-900 text-xs font-semibold leading-5"
+            className="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
           >
             {tag}
           </li>
