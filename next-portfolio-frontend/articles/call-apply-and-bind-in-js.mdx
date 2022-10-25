@@ -1,0 +1,146 @@
+---
+title: "Call, apply and bind in JS"
+publishedAt: "2021-06-24"
+tags: ["JavaScript", "Objects"]
+excerpt: "`this` keyword in JS generally points to the object that the function is a property of. In other words, we can also say `this` refers to the object that is being used to invoke the function."
+---
+
+Hello everyone, in this article, we would be discussing:
+
+- **Implicit binding**, **Explicit binding** in JavaScript
+- the **call, apply and bind** methods in JavaScript and how they are different from each other.
+
+These are very important concepts and are asked frequently in interviews. So, keep reading till the end.
+
+## Implicit & Explicit binding
+
+`this` keyword in JS generally points to the object that the function is a property of. In other words, we can also say `this` refers to the object that is being used to invoke the function.
+
+```javascript
+const souvik = {
+  learning: true,
+  status: "Learning",
+  work: function () {
+    console.log(`${this.status} Full Stack Web Dev!`);
+  },
+};
+
+souvik.work(); //Learning Full Stack Web Dev!
+```
+
+In the example above, we can see that the `work()` method is being invoked using `souvik` object. This way of invoking a method using dot operator is known as **Implicit binding** where `this` refers to the object using which the method is invoked.
+
+There are other ways as well to reuse the same method or, to invoke a method using other objects with the help of `call()`, `apply()` and `bind()` methods in JS where `this` keyword will point to the object that will be passed as an **argument** to the **call(), apply() and bind()** methods. This kind of invoking method is known as **Explicit binding**.
+
+**Want to know more about `this` keyword and objects in JS?** read this [JS objects in depth](https://sjsouvik.hashnode.dev/js-objects-in-depth)
+
+## What is the call() method?
+
+Let's say, we have an object with some properties and functions.
+
+```javascript
+let learning = {
+  technology: "JavaScript",
+  printActivity: function () {
+    console.log("Learning ", this.technology);
+  },
+};
+```
+
+`this` keyword in the object points to the `learning` object itself in the example. And if we just try to invoke the `printActivity()` function, it would print `Learning JavaScript`. Simple! right?
+
+```javascript
+learning.printActivity(); //Learning JavaScript
+```
+
+Now, what if we want to print the same for other learning activities? One solution that comes to our mind easily, is to create a new object for that and call the method just like we did in the 1st example.
+
+```javascript
+let learningSomethingNew = {
+  technology: "React",
+  printActivity: function () {
+    console.log("Learning ", this.technology);
+  },
+};
+```
+
+The other and best solution for this scenario is to use the `call()` method.
+
+```javascript
+let learningSomethingNew = {
+  technology: "React",
+};
+learning.printActivity.call(learningSomethingNew); //Learning React
+```
+
+In this way, we could reuse the `printActivity` function for different objects. That's why it's recommended to write a function separately without making it a part of an object if it could be used in multiple scenarios.
+
+```javascript
+let learning = {
+  technology: "JavaScript",
+};
+
+let learningSomethingNew = {
+  technology: "React",
+};
+
+function printActivity() {
+  console.log("Learning ", this.technology);
+}
+
+printActivity.call(learning); //Learning JavaScript
+printActivity.call(learningSomethingNew); //Learning React
+```
+
+We might need to pass some extra argument to the function as well. We can do that too.
+
+```javascript
+function printActivity(months, days) {
+  console.log(
+    "Learning " + this.technology + "since " + months + " and " + days
+  );
+}
+
+printActivity.call(learning, 3, 15); //Learning JavaScript since 3 months and 15 days
+printActivity.call(learningSomethingNew, 2, 15); //Learning React since 2 months and 15 days
+```
+
+## What is the apply() method?
+
+The `apply()` method is similar to the `call()` method. The only difference is that apply method takes arguments as an array whereas the call method takes arguments separately.
+
+```javascript
+function printActivity(months, days) {
+  console.log(
+    "Learning " + this.technology + "since " + months + " and " + days
+  );
+}
+
+printActivity.apply(learning, [3, 15]); //Learning JavaScript since 3 months and 15 days
+printActivity.apply(learningSomethingNew, [2, 15]); //Learning React since 2 months and 15 days
+```
+
+## What is the bind() method?
+
+The `bind()` method doesn't invoke the function like `call()` and `apply()`, instead it returns a copy of the function where the `this` keyword will point to the object that is passed as an argument.
+
+```javascript
+let learning = {
+  technology: "JavaScript",
+};
+
+function printActivity() {
+  console.log("Learning ", this.technology);
+}
+
+let copyOfTheFunction = printActivity.bind(learning);
+copyOfTheFunction(); //Learning JavaScript
+```
+
+If you want to read more on this, refer [call MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [apply MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), [bind MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind).
+
+Thanks for reading till now🙏
+
+Share this blog with your network if you found it useful and feel free to comment if you've any doubts about the topic.
+
+You can connect 👋 with me on [GitHub](https://github.com/sjsouvik), [Twitter](https://twitter.com/sjsouvik), [Linkedin](https://www.linkedin.com/in/souvik-jana)

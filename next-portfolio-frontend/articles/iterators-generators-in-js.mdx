@@ -1,0 +1,183 @@
+---
+title: "Iterators & Generators in JS"
+publishedAt: "2022-09-12"
+tags: ["JavaScript", "Iterators", "Generators"]
+excerpt: "Anything iterable is an object which will have the `Symbol.iterator` method in it and when we try to iterate it or want it to behave like an iterable(using `for...of` loop), the `Symbol.iterator` method would be invoked which would return an object (iterator). The returned object would have the `next` method in it, which would produce an object with the value and status of the iteration (using _boolean_) - whether any other value is present or not to be iterated."
+---
+
+I learned about _Iterators and Generators in JavaScript_ while solving a problem. So, we will be discussing these concepts here and trying to understand the concepts using the same problem that I encountered.
+
+Before looking at the problem and understanding how to solve it, let's start with some theory...
+
+### Iterators
+
+Iterables are objects which could be iterated using the `for...of` loop.
+
+Anything iterable is an object which will have the `Symbol.iterator` method in it and when we try to iterate it or want it to behave like an iterable(using `for...of` loop), the `Symbol.iterator` method would be invoked which would return an object (iterator). The returned object would have the `next` method in it, which would produce an object with the value and status of the iteration (using _boolean_) - whether any other value is present or not to be iterated.
+
+A method(`Symbol.iterator`) returning an object(iterator) which has another method(`next`) in it 🤔 - complicated, right?
+
+Let's understand the above statements better by solving the problem using iterators now.
+
+The problem:
+
+```
+Q. Can you create a range(from, to) that makes the following work?
+
+for (let num of range(1, 4)) {
+  console.log(num)
+}
+// 1
+// 2
+// 3
+// 4
+
+This is a simple one, could you think of more fancy approaches other than for-loop?
+```
+
+The simplest solution for the above problem would be as follows:
+
+```javascript
+function range(from, to) {
+  const arr = [];
+
+  for (let i = from; i <= to; i++) {
+    arr.push(i);
+  }
+
+  return arr;
+}
+```
+
+> Look at the problem statement again, we are not required to return an array, but something iterable would be fine as we'll be using the `for...of` loop.
+
+Now, we would be writing the `range` function which would take 2 numbers as arguments and return an iterable.
+
+```javascript
+// to make range() iterable
+function range(from, to) {
+  return {
+    [Symbol.iterator]: function () {
+      // This returned object is known as the "iterator object" in the case of iterators and the "generator object" in the case of generators.
+      return {
+        from,
+        to,
+
+        next: function () {
+          if (this.from <= this.to) {
+            return { value: this.from++, done: false };
+          } else {
+            return { done: true };
+          }
+        },
+      };
+    },
+  };
+}
+
+for (const item of range(1, 4)) {
+  console.log(item);
+}
+```
+
+In the above code, whenever we try to iterate using the `for...of` loop,
+
+- it calls the `Symbol.iterator` method once for the 1st time and gets the _iterator_ object.
+
+- Next time onwards `for...of` uses the `next` method to get the next value while iterating.
+
+> Don't confuse arrays with the iterables. Iterables are objects which implement the `Symbol.iterator` method in it. Arrays and strings have built-in implementation of `Symbol.iterator` along with many other methods and properties, not necessarily other iterables would have the same.
+
+### Generators
+
+The generator function returns an object known as the "generator object" and has the `next` method in it.
+
+Example:
+
+```javascript
+function* generatorExample() {
+  yield 1;
+  yield 2;
+}
+
+const generatorObject = generatorExample();
+console.log(generatorObject.next()); // {value: 1, done: false};
+console.log(generatorObject.next()); // {value: 2, done: false};
+console.log(generatorObject.next()); // {value: undefined, done: true};
+```
+
+When the `next` method is called, it executes the function till the 1st yield, then pause the execution and returns an object with 2 properties:
+
+- value: yielded value.
+- done: boolean, which says whether the function execution is finished or not.
+
+> The generator functions can be identified by the `*` in function declaration, right after the `function` keyword(function`*`) or before the function name(function `*`name) without any space.
+
+The same problem mentioned above could be solved using Generator functions quite easily as follows:
+
+```javascript
+function range(from, to) {
+  return {
+    [Symbol.iterator]: function* () {
+      for (let i = from; i <= to; i++) {
+        yield i;
+      }
+    },
+  };
+}
+
+for (const item of range(1, 4)) {
+  console.log(item);
+}
+// 1
+// 2
+// 3
+// 4
+```
+
+The `range` function is still returning an object which has the `Symbol.iterator` method in it. But the difference is the `Symbol.iterator` is holding a generator function now. And as we know, the generator function returns the generator object with the `next` method in itself - which we had to implement explicitly for iterators.
+
+> Generators are also iterable.
+
+we can use the `for...of` loop with generators then.
+
+```javascript
+function* generatorExample() {
+  yield 1;
+  yield 2;
+}
+
+const generatorObject = generatorExample();
+
+for (const item of generatorObject) {
+  console.log(item);
+}
+// 1
+// 2
+```
+
+Since a generator is also iterable, the solution can be simplified more as we don't have to implement the `Symbol.iterator` method explicitly.
+
+```javascript
+function* range(from, to) {
+  for (let i = from; i <= to; i++) {
+    yield i;
+  }
+}
+
+for (const item of range(1, 4)) {
+  console.log(item);
+}
+// 1
+// 2
+// 3
+// 4
+```
+
+That's all for now 😀. Thanks for reading till now🙏.
+
+If you want to read more about these, refer to [Iterators & generators - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators).
+
+Share this blog with your network if you found it useful and feel free to comment if you've any doubts about the topic.
+
+You can connect 👋 with me on [GitHub](https://github.com/sjsouvik), [Twitter](https://twitter.com/sjsouvik), [Linkedin](https://www.linkedin.com/in/souvik-jana)

@@ -1,0 +1,243 @@
+---
+title: "Prototypal Inheritance and Classes in JavaScript"
+publishedAt: "2022-01-08"
+tags: ["JavaScript", "Prototype"]
+excerpt: "In practice, we often need to create many similar objects like a list of phones, employees, etc. So, we can achieve this by creating custom types in JS using _Constructor Function_ and then creating multiple objects from it. In other programming languages, we generally use `class` to define this kind of custom type but in JS, the class system is built directly using functions."
+---
+
+Hello everyone, in this article, we would be discussing:
+
+- Constructor function,
+- Prototypes,
+- Inheritance, classes in JS
+
+These are very important concepts and would help you to understand Object-Oriented Programming(OOP) in JS. So, keep reading till the end and I hope you'll learn something from it.
+
+### Objects
+
+We had discussed earlier how to create and work with objects using literal notation [here](https://sjsouvik.hashnode.dev/js-objects-in-depth).
+
+```javascript
+const phone = {
+  RAM: "8GB",
+  OS: "Andriod",
+};
+```
+
+In practice, we often need to create many similar objects like a list of phones, employees, etc. So, we can achieve this by creating custom types in JS using _Constructor Function_ and then creating multiple objects from it. In other programming languages, we generally use `class` to define this kind of custom type but in JS, the class system is built directly using functions.
+
+So, rather than using classes in JS directly, we can learn how to do the same using `constructor functions` which is the base of Object-Oriented Programming in JS.
+
+> ES6 introduces the `class` keyword that allows us to define custom types. But, classes in JS are syntactic sugar over constructor functions with some enhancements.
+
+### Constructor Functions
+
+Constructor functions are like regular functions with some conventions:
+
+- These functions should be invoked with the `new` operator.
+- Naming of these functions are written in CamelCase(starting with capital letter e.g. Employee) by convention
+- These functions should not have an explicit return value
+
+```javascript
+function Employee(name) {
+  this.name = name;
+  this.role = "Developer";
+}
+```
+
+And, this is to create an object using that constructor function
+
+```javascript
+const employee = new Employee("Souvik");
+console.log(employee); // Employee {name: "Souvik", role: "Developer"}
+```
+
+`this` inside the function definition points to the object that has been created using the `new` keyword in front of the constructor function while invoking it.
+
+So, **what if we don’t use the `new` keyword while calling the function?**
+
+In that case, the function would be invoked as a regular function, a new object would NOT be created and returned. Let’s understand this part by invoking the function mentioned above without the `new` operator:
+
+```javascript
+const employee = Employee();
+console.log(employee); // undefined
+```
+
+As you can see, `undefined` would be returned which any regular function returns by default. Also, `this` would refer to global object `window` as the constructor function has been invoked as a regular function.
+
+These are the followings the `new` keyword is responsible for while invoking constructor function:
+
+- Create a new object and assign it to `this`
+
+- Add properties to the object with the given value
+
+- Return the newly created object
+
+### `this` keyword in JS
+
+We had talked about `this` keyword before and found out `this` behaves differently based on implementation. There’re 4 ways to call a function and `this` refers to a different object in each case.
+
+- If calling a constructor function, then `this` sets to the newly created object
+
+- Invoking a function that belongs to an object would set `this` to the object itself, which is called _Implicit binding_ as discussed [here](https://sjsouvik.hashnode.dev/js-objects-in-depth).
+
+- Simply invoking a regular function would set `this` to the global object `window`.
+
+- The last way of invoking a function allows us to set `this` ourselves using `call()`, `apply()` and `bind()` methods - that’s known as _Explicit binding_, talked about it [here](https://sjsouvik.hashnode.dev/call-apply-and-bind-in-js) earlier as well.
+
+### Prototypal Inheritance
+
+The problem with the constructor function is that if there’s any method present in the constructor function then that will be created for every instance created using the constructor function.
+
+```javascript
+function Employee(name) {
+  this.name = name;
+  this.role = "Developer";
+  this.printDetails = function () {
+    console.log(`${this.name} works as a ${this.role}`);
+  };
+}
+```
+
+So, to make things memory efficient, we can add methods to the `prototype` property of the constructor function, so that all instances of a constructor function can share the same methods.
+
+```javascript
+function Employee(name) {
+  this.name = name;
+  this.role = "Developer";
+}
+
+Employee.prototype.printDetails = function () {
+  console.log(`${this.name} works as a ${this.role}`);
+};
+
+const employee = new Employee("Souvik");
+employee.printDetails(); // Souvik works as a Developer
+```
+
+So, **what is a prototype?**
+
+A prototype is just an object and all objects created from a constructor function are secretly linked to the prototype.
+
+The prototype also keeps a reference to its own prototype object. And, prototype’s prototype is also linked to its own prototype and so on. This is how it forms **prototype chain**.
+
+JavaScript uses this link between an object and its prototype to implement inheritance which is known as **Prototypal Inheritance**.
+
+When we try to access a property or method of an object,
+
+- it tries to find that in the object’s own properties. Any properties or methods defined in the object itself get the highest precedence over defining the same elsewhere just like variable shadowing in the scope chain discussed [here](https://sjsouvik.hashnode.dev/all-about-functions-and-scopes-in-javascript).
+
+- If it doesn’t get that within the object’s properties then it will try to find that in the object’s constructor’s prototype.
+
+- If it’s not there even in the prototype object, the JavaScript engine will continue looking up the prototype chain to get the value. At the end of the chain, there’s `Object()` object, the top-level parent - if the property is not found even there, then the property is `undefined`.
+
+But, one question still arises, **how is an object created by a constructor function secretly linked to its prototype?**
+
+The answer is any object created by a constructor function is linked to its prototype using the `__proto__` property which is made by the constructor function and directly refers to the constructor function's prototype.
+
+```javascript
+console.log(employee.__proto__ === Employee.prototype); // true
+```
+
+> `__proto__` has been used here just for learning purposes. Don't use or reassign the `__proto__` property anywhere in production code as it's not supported by all browsers and updating its value might create performance issues since JS searches for properties along the prototype chain.
+
+If we need to check the prototype for an object, we can use the `Object.getPrototypeOf()` method for the same which takes an object as an argument and returns the prototype of that object.
+
+```javascript
+console.log(Employee.prototype === Object.getPrototypeOf(employee)); // true
+```
+
+### Object.create()
+
+As we discussed, using the `__proto__` property is not a good practice to use in code, so the same shouldn't be used to implement inheritance or build a prototype chain.
+
+That's why ES5 introduced `Object.create()` method to implement _prototypal inheritance_.
+
+`Object.create()` takes an object as an argument and returns a new object with its `__proto__` set to the object that was passed as argument into `Object.create()`.
+
+```javascript
+const person = {
+  name: "Souvik",
+  greet: function () {
+    console.log(`Hi, I’m ${this.name}`);
+  },
+};
+
+const teacher = Object.create(person);
+
+teacher.teach = function (subject) {
+  console.log(`I can teach ${subject}`);
+};
+
+teacher.greet(); // Hi, I'm Souvik
+teacher.teach("JavaScript"); // I can teach JavaScript
+console.log(Object.getPrototypeOf(teacher) === person); // true
+```
+
+We can leverage `Object.create()` the following way to implement inheritance.
+
+```javascript
+function Animal(name) {
+  this.name = name;
+}
+
+Animal.prototype.walk = function () {
+  console.log(`${this.name} can walk`);
+};
+
+function Dog(name, lifetime) {
+  Animal.call(this, name); // calling parent constructor function to initialize parent properties for child objects
+  this.lives = lifetime;
+}
+
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+
+Dog.prototype.details = function () {
+  console.log(`${this.name} can live for ~${this.lives} years`);
+};
+
+const dog = new Dog("Dobby", 10);
+dog.walk(); // Dobby can walk
+dog.details(); // Dobby can live for ~10 years
+```
+
+In this way _Dog_ inherits properties and methods from _Animal_ using _prototypal inheritance_. But this is a bit tricky and verbose.
+
+That's why ES6 introduces the `class` and `extends` keyword to simplify inheritance implementation in JS. Classes in JS are special functions. And the same implementation using `class` would look like this:
+
+```javascript
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  walk() {
+    console.log(`${this.name} walks`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, lifetime) {
+    super(name);
+    this.lives = lifetime;
+  }
+
+  details() {
+    console.log(`${this.name} can live for ~${this.lives} years`);
+  }
+}
+
+const dog = new Dog("Dobby", 10);
+dog.walk(); // Dobby can walk
+dog.details(); // Dobby can live for ~10 years
+console.log(typeof Animal); // function
+```
+
+That's all 😀. Thanks for reading till now🙏.
+
+If you want to read more on these, refer to [OOP in JS MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS), [Object Prototypes MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes), [Inheritance in JS MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance), [Classes MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
+Share this blog with your network if you found it useful and feel free to comment if you've any doubts about the topic.
+
+You can connect 👋 with me on [GitHub](https://github.com/sjsouvik), [Twitter](https://twitter.com/sjsouvik), [Linkedin](https://www.linkedin.com/in/souvik-jana)
