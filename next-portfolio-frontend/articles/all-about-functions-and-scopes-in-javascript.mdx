@@ -1,0 +1,271 @@
+---
+title: "All about Functions and Scopes in JavaScript"
+publishedAt: "2021-09-05"
+tags: ["JavaScript", "Functions", "Scope", "Closure"]
+excerpt: "Functions allow us to package up lines of code so that we can use (and reuse) a block of code in our programs. Sometimes, they take some values as `parameters` to do the operation and return some value as a result of the operation."
+---
+
+Hello everyone, we would be covering all about JS functions, callbacks, scopes, closures in-depth here which would help you to
+
+- understand different types of functions declaration
+- make better use of functions
+- understand how different scopes and scope chain work in JS
+- learn about closures and how to use it
+
+So, keep reading till the end and I hope you'll learn something from it.
+
+### Functions
+
+Functions allow us to package up lines of code so that we can use (and reuse) a block of code in our programs. Sometimes, they take some values as `parameters` to do the operation and return some value as a result of the operation.
+
+```javascript
+function add(a, b) {
+  //a, b are the parameters of this function
+  //code to do the operation
+  return a + b; //return statement
+}
+
+add(2, 3); //invoking the function; 2, 3 are arguments here
+```
+
+### First-Class Citizen
+
+Functions are considered as First-Class Citizen in JavaScript, which means we can do anything we want with functions.
+
+We can
+
+- store function in a variable
+- pass a function as an argument to another function
+- return a function from another function
+
+### Function Expressions
+
+When a function is stored inside a variable it's called a **function expression**. This can be named or anonymous. If a function doesn't have any name and is stored in a variable, then it would be known as **anonymous function expression**. Otherwise, it would be known as **named function expression**.
+
+```javascript
+//Anonymous function expression
+const add = function (a, b) {
+  return a + b;
+};
+
+//Named function expression
+const subtractResult = function subtract(a, b) {
+  return a - b;
+};
+
+console.log(add(3, 2)); // 5
+console.log(subtractResult(3, 2)); // 1
+```
+
+### Callbacks
+
+Storing a function in a variable makes it really easy to pass a function to another function as an argument. A function that takes other functions as arguments or returns a function is known as **higher-order function**. A function that is passed as an argument into another function is known as **callback** function.
+
+```javascript
+function showLength(name, callback) {
+  callback(name);
+}
+
+//function expression `nameLength`
+const nameLength = function (name) {
+  console.log(`Given Name ${name} is ${name.length} chars long`); // Given Name Souvik is 6 chars long
+};
+
+showLength("Souvik", nameLength); //passing `nameLength` as a callback function
+```
+
+Generally, we use callback function in array methods - `forEach()`, `map()`, `filter()`, `reduce()`.
+
+### Scope
+
+**Scope** in JS tells us what variables and functions are accessible and not accessible in a given part of the code.
+
+There're 3 kinds of scopes in JavaScript.
+
+- Global scope
+- Function scope
+- Block scope
+
+Variables declared outside of all functions are known as global variables and in **global scope**. Global variables are accessible anywhere in the program.
+
+Variables that are declared inside a function are called local variables and in **function scope**. Local variables are accessible anywhere inside the function.
+
+The code inside a function has access to
+
+- the function's arguments
+- local variables declared inside the function
+- variables declared in its parent function's scope
+- global variables
+
+```javascript
+const name = "Souvik";
+function introduceMyself(greet) {
+  const audience = "students";
+  function introduce() {
+    console.log(`${greet} ${audience}, I am ${name}`); // Hello students, I am Souvik
+  }
+  introduce();
+}
+introduceMyself("Hello");
+```
+
+**Block scope** tells us that any variable declared inside a block ({}) can be accessed only inside that block.
+
+Now, what is **block** 🤔? a block {} is used to group JavaScript statements together into 1 group so that can be used anywhere in the program where only 1 statement is expected to be written.
+
+> Block scope is related to variables declared with `let` and `const` only. Variables declared with `var` do not have block scope.
+
+```javascript
+{
+  let a = 3;
+  var b = 2;
+}
+
+console.log(a); //Uncaught ReferenceError: a is not defined
+console.log(b); // 2 `as variables declared with `var` is functionally and globally scoped NOT block scoped`
+```
+
+### Scope chain
+
+Whenever our code tries to access a variable during the function call, it starts the searching from local variables. And if the variable is not found, it'll continue searching in its outer scope or parent functions' scope until it reaches the global scope and completes searching for the variable there. Searching for any variable happens along the **scope chain** or in different scopes until we get the variable.
+
+If the variable is not found in the global scope as well, a reference error is thrown.
+
+```javascript
+const name = "Souvik";
+function introduceMyself(greet) {
+  const audience = "students";
+  function introduce() {
+    console.log(`${greet} ${audience}, my name is ${name}`); // Hello students, my name is Souvik
+  }
+  introduce();
+}
+introduceMyself("Hello");
+```
+
+In the given example above, when the code attempts to access variable `name` inside the `introduce()` function, it didn't get the variable there and tried to search in its parent function's (`introduceMyself()`) scope. And as it was not there, it finally went up to global scope to access the variable and got the value of the variable `name`.
+
+### Variable shadowing
+
+If we declare a variable with the same name as another variable in the scope chain, the variable with local scope will shadow the variable at the outer scope. This is known as **variable shadowing**.
+
+Example 1:
+
+```javascript
+let name = "Abhijit";
+var sector = "Government";
+{
+  let name = "Souvik";
+  var sector = "Private"; //as `var` is NOT block scoped(globally scoped here), it'll update the value
+  console.log(name); //Souvik
+  console.log(sector); //Private
+}
+console.log(name); //Abhijit
+console.log(sector); //Private
+```
+
+Example 2:
+
+```javascript
+let name = "Abhijit";
+var sector = "Government";
+function showDetails() {
+  let name = "Souvik";
+  var sector = "Private"; //`var` is functionally scoped here, so it'll create new reference with the given value for organization
+  console.log(name); //Souvik
+  console.log(sector); //Private
+}
+showDetails();
+console.log(name); //Abhijit
+console.log(sector); //Government
+```
+
+In case of example 1, the `name` variable is shadowing the variable with the same name at the outer scope inside the block as we have used `let` to declare the variable. But, the `sector` variable is also updating the value at the same time as we have used `var` to declare it. And as we know `var` is functionally and globally scoped, the declaration with the same name(`sector`) inside the block will update the value at the same reference.
+
+Whereas in case of example 2, the `sector` variable inside the function is function scoped and will create a new reference which will just shadow the variable with the same name declared outside.
+
+### Closure
+
+Closure is an ability of a function to remember the variables and functions that are declared in its outer scope.
+
+MDN defines closure as:
+
+> the combination of a function bundled together with references to its surrounding state or the **lexical environment**
+
+Now, if you're thinking 🤔 what's **lexical environment**? function's local environment along with its parent function's environment forms lexical environment.
+
+```javascript
+function closureDemo() {
+  const a = 3;
+  return function () {
+    console.log(a);
+  };
+}
+const innerFunction = closureDemo(); //returns the definition of inner function
+innerFunction(); // 3
+```
+
+In the above example, when the `closureDemo()` function is called, it'll return the inner function along with its lexical scope. Then when we attempt to execute the returned function, it'll try to log the value of `a` and get the value from its lexical scope's reference. This is called **closure**. Even after the outer function's execution, the returned function still holds the reference of the lexical scope.
+
+#### Advantages:
+
+- Currying
+- Memoization
+- Module design pattern
+
+Discussing these in detail would take another blog 😀. So, will do it later sometime to discuss problems and solutions using a closure.
+
+#### Disadvantages:
+
+- Overconsumption of memory might lead up to the memory leak as the innermost function holds the reference of the lexical scope and the variables declared in its lexical scope won't be garbage collected even after the outer function has been executed.
+
+### Immediately-Invoked Function Expression(IIFE)
+
+An immediately-invoked function expression or IIFE(pronounced as iify) is a function that's called immediately once it's defined.
+
+```javascript
+(function task() {
+  console.log("Currently writing a blog on JS functions");
+})();
+```
+
+We're basically wrapping a function in parenthesis and then adding a pair of parenthesis at the end to invoke it.
+
+### Passing arguments into IIFE
+
+We can also pass arguments into IIFE. The second pair of parenthesis not only can be used to invoke the function immediately but also can be used to pass any arguments into the IIFE.
+
+```javascript
+(function showName(name) {
+  console.log(`Given name is ${name}`); // Given name is Souvik
+})("Souvik");
+```
+
+### IIFE and private scope
+
+If we can use IIFE along with closure, we can create a private scope and can protect some variables from being accessed externally. The same idea is used in module design pattern to keep variables private.
+
+```javascript
+//module pattern
+let greet = (function () {
+  const name = "Souvik Jana"; //private variable
+  return {
+    introduce: function () {
+      console.log(`Hi, I am ${name}`);
+    },
+  };
+})();
+
+console.log(greet.name); //undefined
+greet.introduce(); // Hi, I am Souvik Jana
+```
+
+IIFE helps to prevent access to the `name` variable here. And the returned object's `introduce()` method retains the scope of its parent function(due to closure), we got a public interface to interact with `name`.
+
+That's all 😀. Thanks for reading till now🙏.
+
+If you want to read more on these, refer to [Functions MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions), [Closures MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures), [IIFE MDN](https://developer.mozilla.org/en-US/docs/Glossary/IIFE).
+
+Share this blog with your network if you found it useful and feel free to comment if you've any doubts about the topic.
+
+You can connect 👋 with me on [GitHub](https://github.com/sjsouvik), [Twitter](https://twitter.com/sjsouvik), [Linkedin](https://www.linkedin.com/in/souvik-jana)
