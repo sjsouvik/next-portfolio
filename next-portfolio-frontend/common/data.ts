@@ -1,5 +1,10 @@
 import { experienceImageURL, educationImageURL } from "./constants";
-import Videozen from "../assets/videozen-compressed.png";
+import videozen from "../assets/videozen-compressed.png";
+import shopwild from "../assets/shopwild.png";
+import sharedeck from "../assets/sharedeck.png";
+import quizn from "../assets/quizn.png";
+import uiBlocks from "../assets/ui-blocks.png";
+import portfolio from "../assets/portfolio.png";
 
 export const timeLineData = {
   experience: [
@@ -40,7 +45,7 @@ export const timeLineData = {
 
 export const featuredProjects = {
   p1: {
-    imageLink: Videozen,
+    imageLink: videozen,
     title: "Videozen",
     content:
       "A video library that has some playlists and videos on web technologies. You can use this to learn web development, create custom playlist, add videos to watch later, check history of watched videos, search videos.",
@@ -58,8 +63,7 @@ export const featuredProjects = {
     sourceLink: "https://github.com/sjsouvik/Videozen/",
   },
   p2: {
-    imageLink:
-      "https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    imageLink: shopwild,
     title: "Shopwild",
     content:
       "An online shopping app to revolutionize your shopping where you can filter, search items, add items to wishlist, cart and place order.",
@@ -82,8 +86,7 @@ export const featuredProjects = {
 
 export const otherProjects = {
   p3: {
-    imageLink:
-      "https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    imageLink: sharedeck,
     title: "Sharedeck",
     content:
       "A Social media application to share your learning, work and experience where you can create posts, follow other people to see their posts, add reacttion to posts.",
@@ -102,8 +105,7 @@ export const otherProjects = {
     sourceLink: "https://github.com/sjsouvik/Sharedeck",
   },
   p4: {
-    imageLink:
-      "https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    imageLink: quizn,
     title: "Quizn",
     content:
       "A quiz app that has some quizzes on web technologies. You can use this to test their knowledge of web development.",
@@ -122,8 +124,7 @@ export const otherProjects = {
     sourceLink: "https://github.com/sjsouvik/Quizn",
   },
   p5: {
-    imageLink:
-      "https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    imageLink: uiBlocks,
     title: "UI Blocks",
     content:
       "A CSS component library that provides simple, accessible UI components for faster web development. I have used this library to build my other web apps.",
@@ -132,8 +133,7 @@ export const otherProjects = {
     sourceLink: "https://github.com/sjsouvik/UI-Blocks",
   },
   p6: {
-    imageLink:
-      "https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    imageLink: portfolio,
     title: "Souvik's Portfolio",
     content:
       "A portfolio to showcase all his side-projects and blogs at one place with other info.",
