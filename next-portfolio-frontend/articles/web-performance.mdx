@@ -1,0 +1,105 @@
+---
+title: "Web Performance"
+publishedAt: "2022-01-23"
+tags: ["Web Vitals", "Performance"]
+excerpt: "There're a few metrics known as **Web Vitals** to measure the performance of web apps."
+---
+
+Hello 👋 everyone, I have started learning about Web Performance recently. So, just thought of sharing my learning so far…
+
+### Web Vitals
+
+There're a few metrics known as **Web Vitals** to measure the performance of web apps. So, let’s discuss those metrics briefly:
+
+**First Contentful Paint(FCP):** The time until the user sees an indication that the page is loading.
+
+**Largest Contentful Paint(LCP):** The time until the user sees most of the page and believes that it's almost ready to use.
+
+**Cumulative Layout Shift(CLS):** The movement distance and the impact of the page elements during the entire lifetime of the document the user sees.
+
+**First Input Delay(FID):** The browser time delay between the user's first click and the actual execution of the application code for that click.
+
+As we now have a basic understanding of these metrics, let's see how we can improve these to make our apps faster for everyone.
+
+### How can we improve FCP?
+
+- Server with correct hardware configurations based on the need would be doing minimal processing to complete one request with enough bandwidth to complete all the requests.
+
+- Small content(HTML page, images,...) delivery over the network with compression(e.g. gzip, brotli,...) would reduce the size of the content and eventually gives better performance.
+
+- Using CDN(Content Delivery Network) which would cache the response of every request. If CDN doesn't contain the data then only the request goes to the server for the 1st time and caches the same response to reduce the time of content delivery from the server to the user would improve _FCP_.
+
+### How can we improve LCP?
+
+This is an important metric that can be optimized by downloading and rendering resources that are most important to show the page.
+
+- Defer downloading resources(images, scripts,...) for later if that's not required immediately to show the page. Use **defer** to download scripts parallelly and execute later.
+
+- Optimize images by using some compressing tool(e.g. tinypng.com)
+
+**Load images lazily**
+
+`loading="lazy"` for images/videos(as we use `iframe` tag to show video in website/app, `loading="lazy"` attribute is applicable for any tag which has `src` as an attribute to load content lazily) can download image parallelly but won't render until it's required to show in the UI based on user's action which can eventually improve the performance as all images rendering won't be a part of LCP process.
+
+**Use `srcset` to show images based on the width of the device for responsive images**
+
+Earlier we had the `src` attribute for images, but now we also have `srcset` which would take multiple images' sources as value to download & show images based on the device's width. Also, need to add a kind of condition to show the correct version of the image using the `sizes` attribute. While using `srcset`, `src` contains fallback images' source i.e. if `srcset` is not found for a particular width then only the image of `src` would be rendered.
+
+```html
+<img
+  src="picture-1200.jpg"
+  srcset="picture-600.jpg 600w, picture-900.jpg 900w, picture-1200.jpg 1200w"
+  sizes="(max-width: 600px) 600px, (max-width: 900px): 900px, 1200px"
+/>
+```
+
+- Reduce request overhead
+
+  - We can use http/2 for reducing overhead which is faster, can help us to reuse connections if we're downloading resources multiple times from a server by removing TCP connection and SSL handshake for each request. But, http/2 is not supported by all servers and requires SSL certification to work which is difficult to set up locally.
+
+  - Caching requests could be another approach to reduce request overhead. In this approach, we don't have to do a DNS lookup, TCP connection, SSL handshake, request, response - just take the resource and process it as the browser has it already. But, this can only happen from the 2nd time, for the 1st time, it would download everything required. We can use 3 tags to tell the browser to keep these resources for a particular amount of time - `cache control`, `expires`, `etag`.
+
+  - Use `preconnect`, `preload` respectively to start connecting with the server and load some resources which are required to show the UI early. `preconnect` starts DNS lookup or other activities that are required for a request to make the process faster whereas `preload` downloads the resource to make the rendering process faster. We use `preconnect` where we don't know exactly which file we need to download and in the case of `preload`, we know which file needs to be downloaded so we use this.
+
+```html
+<link rel="preconnect" href="fonts.gstatic.com" /> //to start connecting with
+the server early as we need to download font from there to show UI properly
+<link rel="preload" href="/css/index.css" /> //to download resources that are
+required to show UI
+```
+
+These things can help us to reduce the time between FCP and LCP.
+
+### How can we improve CLS?
+
+- Apply CSS such that one part of the app doesn't shift other parts of it.
+
+- Give height and width to images so that browser knows how much space needs to be reserved which would help us to reduce layout shift and improve CLS.
+
+### How can we improve FID?
+
+- Reducing JavaScript loading for a single page would reduce the execution time by the browser and eventually improve FID. So, techniques like _code-splitting_ can help here as it would allow the app to load and execute JavaScript when it's needed to make the page interactive.
+
+- Use **web worker** to execute JS code for other operations on a worker thread so that it reduces main thread blocking time and consecutively improves FID score.
+
+### Gotchas
+
+We can use Chrome’s **Lighthouse** to measure the performance of a web app and the result would be shown with respect to the mentioned metrics above.
+
+However, there’re a few _gotchas_ to keep in mind while measuring performance using Chrome’s _lighthouse_:
+
+- It measures performance based on your machine and network NOT the end user's machine and network.
+
+- Measurement depends on Chrome window size where the application is running so separate out the lighthouse window(select _undock into separate window_) before starting measuring performance.
+
+- Don't use any other app(by keeping the app in the background for which you want to measure performance) while measuring performance as it'll impact the measurement.
+
+- Open the app in an incognito browser window, so that it can be measured without any caching data and gives a fair measurement.
+
+That's all for now 😀. Thanks for reading till now🙏. Explaining each and every keyword in a single blog is difficult I feel. So, please read more about it or let me know if you want me to write a separate blog on some other topic/keywords in detail.
+
+If you want to read more on these, refer to [Web Vitals in web.dev](https://web.dev/learn-web-vitals/), [Metrics in web.dev](https://web.dev/metrics/), [Fast load times in web.dev](https://web.dev/fast/).
+
+Share this blog with your network if you found it useful and feel free to comment if you've any doubts about the topic.
+
+You can connect 👋 with me on [GitHub](https://github.com/sjsouvik), [Twitter](https://twitter.com/sjsouvik), [Linkedin](https://www.linkedin.com/in/souvik-jana)
