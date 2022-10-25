@@ -18,7 +18,7 @@ const HeroHeader = () => {
           side-projects
         </LinkButton>{" "}
         and my{" "}
-        <LinkButton href="https://sjsouvik.medium.com/">blogs</LinkButton> where
+        <LinkButton href="/blogs" target="">blogs</LinkButton> where
         I post tutorials and things that spark my curiosity.
       </p>
       <div className="flex justify-center">
