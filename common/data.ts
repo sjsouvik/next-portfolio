@@ -13,7 +13,7 @@ export const timeLineData = {
       company: "Thoughtworks",
       title: "UI Developer",
       content:
-        "Built a system from scratch with authentication, authorization, pagination, history with filters, admin to control all users' access on the systm, user's profile and search where test coverage is > 90% for one of the telecom giants in India.",
+        "Built a system from scratch with authentication, authorization, pagination, history with filters, admin to control all users' access on the system, user's profile and search where test coverage is > 90% for one of the telecom giants in India.",
       timelineImageURL: experienceImageURL,
     },
     {
