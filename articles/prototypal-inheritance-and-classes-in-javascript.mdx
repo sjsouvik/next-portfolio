@@ -137,7 +137,7 @@ When we try to access a property or method of an object,
 
 - If it doesn’t get that within the object’s properties then it will try to find that in the object’s constructor’s prototype.
 
-- If it’s not there even in the prototype object, the JavaScript engine will continue looking up the prototype chain to get the value. At the end of the chain, there’s `Object()` object, the top-level parent - if the property is not found even there, then the property is `undefined`.
+- If it’s not there even in the prototype object, the JavaScript engine will continue looking up the prototype chain to get the value. At the end of the chain, there’s `Object()`'s prototype: the top-most prototype object in the chain - if the property is not found even there, then the property is `undefined`.
 
 But, one question still arises, **how is an object created by a constructor function secretly linked to its prototype?**
 
