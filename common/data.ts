@@ -45,32 +45,11 @@ export const timeLineData = {
 
 export const featuredProjects = {
   p1: {
-    imageLink: videozen,
-    title: "Videozen",
-    content:
-      "A video library that has some playlists and videos on web technologies. You can use this to learn web development, create custom playlist, add videos to watch later, check history of watched videos, search videos.",
-    tags: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "ReactJS",
-      "NodeJS",
-      "ExpressJS",
-      "MongoDB",
-      "JWT",
-    ],
-    demoLink: "https://videozen.netlify.app/",
-    sourceLink: "https://github.com/sjsouvik/Videozen/",
-  },
-  p2: {
     imageLink: shopwild,
     title: "Shopwild",
     content:
       "An online shopping app to revolutionize your shopping where you can filter, search items, add items to wishlist, cart and place order.",
     tags: [
-      "HTML",
-      "CSS",
-      "JavaScript",
       "ReactJS",
       "NodeJS",
       "ExpressJS",
@@ -78,9 +57,31 @@ export const featuredProjects = {
       "JWT",
       "Jest",
       "React Testing Library",
+      "GitHub Actions",
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
     demoLink: "https://shopwild.netlify.app/",
     sourceLink: "https://github.com/sjsouvik/shopwild",
+  },
+  p2: {
+    imageLink: videozen,
+    title: "Videozen",
+    content:
+      "A video library that has some playlists and videos on web technologies. You can use this to learn web development, create custom playlist, add videos to watch later, check history of watched videos, search videos.",
+    tags: [
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+      "JWT",
+      "HTML",
+      "CSS",
+      "JavaScript",
+    ],
+    demoLink: "https://videozen.netlify.app/",
+    sourceLink: "https://github.com/sjsouvik/Videozen/",
   },
 };
 
@@ -91,15 +92,15 @@ export const otherProjects = {
     content:
       "A Social media application to share your learning, work and experience where you can create posts, follow other people to see their posts, add reacttion to posts.",
     tags: [
-      "HTML",
-      "CSS",
-      "JavaScript",
       "ReactJS",
       "Redux-toolkit",
       "NodeJS",
       "ExpressJS",
       "MongoDB",
       "JWT",
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
     demoLink: "https://sharedeck.netlify.app/",
     sourceLink: "https://github.com/sjsouvik/Sharedeck",
@@ -110,15 +111,15 @@ export const otherProjects = {
     content:
       "A quiz app that has some quizzes on web technologies. You can use this to test their knowledge of web development.",
     tags: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
       "ReactJS",
+      "TypeScript",
       "NodeJS",
       "ExpressJS",
       "MongoDB",
       "JWT",
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
     demoLink: "https://quizn.netlify.app/",
     sourceLink: "https://github.com/sjsouvik/Quizn",
@@ -137,7 +138,16 @@ export const otherProjects = {
     title: "Souvik's Portfolio",
     content:
       "A portfolio to showcase all his side-projects and blogs at one place with other info.",
-    tags: ["HTML", "CSS", "JavaScript", "TypeScript", "NextJS"],
+    tags: [
+      "NextJS",
+      "TypeScript",
+      "Jest",
+      "React Testing Library",
+      "GitHub Actions",
+      "HTML",
+      "CSS",
+      "JavaScript",
+    ],
     demoLink: "https://souvikjana.vercel.app/",
     sourceLink:
       "https://github.com/sjsouvik/next-portfolio/tree/next-portfolio-frontend",
@@ -165,5 +175,5 @@ export const skillsData = {
   ],
   Frameworks: ["NextJS", "Tailwind CSS", "NodeJS", "ExpressJS"],
   Databases: ["MS Sql Server", "MySQL", "MongoDB"],
-  Tools: ["Git & GitHub"],
+  Tools: ["Git & GitHub", "GitHub Actions"],
 };

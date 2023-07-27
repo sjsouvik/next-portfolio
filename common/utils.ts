@@ -16,7 +16,7 @@ export const getAllProjects = () => {
   return Object.values(all);
 };
 
-export const getFilteredEntitesBasedOnTag = <T extends Project | BlogPost>(
+export const getFilteredEntitiesBasedOnTag = <T extends Project | BlogPost>(
   data: Array<T>,
   searchTag: string
 ) => {
@@ -32,7 +32,7 @@ export const getFilteredEntitesBasedOnTag = <T extends Project | BlogPost>(
 export const getFilteredProjectsBasedOnTag = (searchTag: string) => {
   const allProjects = getAllProjects();
 
-  return getFilteredEntitesBasedOnTag(allProjects, searchTag);
+  return getFilteredEntitiesBasedOnTag(allProjects, searchTag);
 };
 
 const tagsReducer = (tagsObj: Record<string, number>, { tags }: TagsProps) => {
@@ -64,7 +64,7 @@ export const getTagsFromAllBlogs = (allBlogPosts: Array<BlogPost>) => {
 export const getFilteredBlogsBasedOnTag = (
   allBlogs: Array<BlogPost>,
   searchTag: string
-) => getFilteredEntitesBasedOnTag(allBlogs, searchTag);
+) => getFilteredEntitiesBasedOnTag(allBlogs, searchTag);
 
 export const pluralize = (count: number, query: string) => {
   return count > 1 ? `${query}s are` : `${query} is`;
