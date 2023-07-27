@@ -1,0 +1,641 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot tests for all pages should render the home page properly 1`] = `
+<div>
+  <nav
+    class=" z-50 fixed w-full bg-white shadow-md sm:hidden"
+  >
+    <div
+      class="flex flex-col"
+    >
+      <div
+        class="flex p-4"
+      >
+        <div
+          class="flex flex-1"
+        >
+          <div
+            class="flex-1 text-center"
+          >
+            Souvik Jana
+          </div>
+          <span
+            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+          >
+            <span
+              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2720%27%20height=%2720%27/%3e"
+                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+              />
+            </span>
+            <img
+              alt="menu"
+              data-nimg="intrinsic"
+              decoding="async"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+            <noscript />
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div
+    class="px-4 lg:px-0 max-w-4xl m-auto"
+  >
+    <div
+      class="hidden sm:block"
+    >
+      <nav
+        class="flex py-6 justify-between items-center"
+      >
+        <a
+          href="/"
+        >
+          Souvik Jana
+        </a>
+        <ul
+          class="flex space-x-8"
+        >
+          <li
+            class="navbar__item underline underline-offset-2"
+          >
+            <a
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="navbar__item "
+          >
+            <a
+              href="/about"
+            >
+              About
+            </a>
+          </li>
+          <li
+            class="navbar__item "
+          >
+            <a
+              href="/projects"
+            >
+              Projects
+            </a>
+          </li>
+          <li
+            class="navbar__item "
+          >
+            <a
+              href="/blogs"
+            >
+              Blogs
+            </a>
+          </li>
+          <li
+            class="navbar__item "
+          >
+            <a
+              href="https://instahyre-2.s3-ap-south-1.amazonaws.com/media/resume/1571848/03545cd8d7/Souvik_Jana.pdf"
+              target="_blank"
+            >
+              Resume
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main
+      class="pt-20 md:pt-6"
+    >
+      <div
+        class="pt-4 mb-24"
+      >
+        <h1
+          class="text-4xl font-extrabold mb-8"
+        >
+          Hi!
+           
+          <span
+            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+          >
+            <span
+              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
+                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+              />
+            </span>
+            <img
+              alt="waving hand"
+              data-nimg="intrinsic"
+              decoding="async"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+            <noscript />
+          </span>
+           I am Souvik Jana.
+        </h1>
+        <p
+          class="text-gray-500 mb-6"
+        >
+          I want to take my passion, education, and experience to develop websites, webapps. Check out my
+           
+          <a
+            class="underline lowercase text-gray-600 decoration-gray-500 hover:text-gray-900 hover:decoration-gray-900 "
+            href="/projects"
+            target=""
+          >
+            side-projects
+          </a>
+           
+          and my
+           
+          <a
+            class="underline lowercase text-gray-600 decoration-gray-500 hover:text-gray-900 hover:decoration-gray-900 "
+            href="/blogs"
+            target=""
+          >
+            blogs
+          </a>
+           where I post tutorials and things that spark my curiosity.
+        </p>
+        <div
+          class="flex justify-center"
+        >
+          <a
+            class="inline-block text-md m-4 px-8 py-3 uppercase tracking-widest rounded-full border-2 text-gray-500 border-gray-400 button__transition "
+            href="/about"
+            target=""
+          >
+            more about me
+          </a>
+        </div>
+      </div>
+      <section
+        class="mb-24"
+      >
+        <h1
+          class="text-3xl font-bold mb-4"
+        >
+          Featured Projects
+        </h1>
+        <p
+          class="text-gray-500 mb-6"
+        >
+          I enjoy to continue learning to improve my knowledge and to gain a completely new experience. You'll see some of the frontend & backend projects I've accomplished.
+        </p>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 mb-6"
+        >
+          <div
+            class="w-full"
+          >
+            <div
+              class="flex flex-col h-full shadow-md border border-gray-200 rounded-md"
+            >
+              <div>
+                <a
+                  href="https://videozen.netlify.app/"
+                  target="_blank"
+                >
+                  <span
+                    style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
+                  >
+                    <span
+                      style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 60% 0px 0px 0px;"
+                    />
+                    <img
+                      alt=""
+                      class="rounded-t-md cursor-pointer scale-125 opacity-80 transition-opacity transition-transform duration-500 hover:opacity-100 hover:scale-110"
+                      data-nimg="responsive"
+                      decoding="async"
+                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                    />
+                    <noscript />
+                  </span>
+                </a>
+              </div>
+              <div
+                class="flex flex-col p-4 space-y-3"
+              >
+                <div
+                  class="text-2xl font-bold "
+                >
+                  Videozen
+                </div>
+                <div
+                  style="min-height: 55px;"
+                >
+                  <ul
+                    class="flex flex-wrap items-center"
+                  >
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                    >
+                      HTML
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                    >
+                      CSS
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                    >
+                      JavaScript
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                    >
+                      ReactJS
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                    >
+                      NodeJS
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                    >
+                      ExpressJS
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="text-gray-500 line__clamp flex-1"
+                  style="min-height: 70px;"
+                >
+                  A video library that has some playlists and videos on web technologies. You can use this to learn web development, create custom playlist, add videos to watch later, check history of watched videos, search videos.
+                </div>
+                <div
+                  class="flex space-x-4 flex-1"
+                >
+                  <a
+                    class="underline lowercase text-gray-600 decoration-gray-500 hover:text-gray-900 hover:decoration-gray-900 "
+                    href="https://videozen.netlify.app/"
+                    target="_blank"
+                  >
+                    Visit Site
+                  </a>
+                  <a
+                    class="underline lowercase text-gray-600 decoration-gray-500 hover:text-gray-900 hover:decoration-gray-900 "
+                    href="https://github.com/sjsouvik/Videozen/"
+                    target="_blank"
+                  >
+                    Source Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full"
+          >
+            <div
+              class="flex flex-col h-full shadow-md border border-gray-200 rounded-md"
+            >
+              <div>
+                <a
+                  href="https://shopwild.netlify.app/"
+                  target="_blank"
+                >
+                  <span
+                    style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
+                  >
+                    <span
+                      style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 60% 0px 0px 0px;"
+                    />
+                    <img
+                      alt=""
+                      class="rounded-t-md cursor-pointer scale-125 opacity-80 transition-opacity transition-transform duration-500 hover:opacity-100 hover:scale-110"
+                      data-nimg="responsive"
+                      decoding="async"
+                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                    />
+                    <noscript />
+                  </span>
+                </a>
+              </div>
+              <div
+                class="flex flex-col p-4 space-y-3"
+              >
+                <div
+                  class="text-2xl font-bold "
+                >
+                  Shopwild
+                </div>
+                <div
+                  style="min-height: 55px;"
+                >
+                  <ul
+                    class="flex flex-wrap items-center"
+                  >
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                    >
+                      HTML
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                    >
+                      CSS
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                    >
+                      JavaScript
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                    >
+                      ReactJS
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                    >
+                      NodeJS
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                    >
+                      ExpressJS
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="text-gray-500 line__clamp flex-1"
+                  style="min-height: 70px;"
+                >
+                  An online shopping app to revolutionize your shopping where you can filter, search items, add items to wishlist, cart and place order.
+                </div>
+                <div
+                  class="flex space-x-4 flex-1"
+                >
+                  <a
+                    class="underline lowercase text-gray-600 decoration-gray-500 hover:text-gray-900 hover:decoration-gray-900 "
+                    href="https://shopwild.netlify.app/"
+                    target="_blank"
+                  >
+                    Visit Site
+                  </a>
+                  <a
+                    class="underline lowercase text-gray-600 decoration-gray-500 hover:text-gray-900 hover:decoration-gray-900 "
+                    href="https://github.com/sjsouvik/shopwild"
+                    target="_blank"
+                  >
+                    Source Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-center"
+        >
+          <a
+            class="inline-block text-md m-4 px-8 py-3 uppercase tracking-widest rounded-full border-2 text-gray-500 border-gray-400 button__transition "
+            href="/projects"
+            target=""
+          >
+            View All Projects
+          </a>
+        </div>
+      </section>
+      <section
+        class="mb-24"
+      >
+        <h1
+          class="text-3xl font-bold mb-4"
+        >
+          Work Experience
+        </h1>
+        <p
+          class="text-gray-500 mb-6"
+        >
+          Work experience so far.
+        </p>
+        <div
+          class="antialiased p-6 bg-gray-100 text-gray-800 rounded-lg"
+        >
+          <div
+            class="relative container mx-auto px-6 flex flex-col space-y-8"
+          >
+            <div
+              class="absolute z-0 inset-0 left-21 bg-white h-full w-2 shadow-md rounded-2xl md:mx-auto md:left-0 md:right:0"
+            />
+            <div
+              class="relative z-10"
+            >
+              <div
+                class="timeline__img p-5"
+              >
+                <span
+                  style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                >
+                  <span
+                    style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  >
+                    <img
+                      alt=""
+                      aria-hidden="true"
+                      src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2796%27%20height=%2796%27/%3e"
+                      style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    />
+                  </span>
+                  <img
+                    alt="work"
+                    data-nimg="intrinsic"
+                    decoding="async"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                  />
+                  <noscript />
+                </span>
+              </div>
+              <div
+                class="timeline__container "
+              >
+                <div
+                  class="timeline__pointer "
+                />
+                <div
+                  class="bg-white rounded-md shadow-md p-6"
+                >
+                  <span
+                    class="font-bold text-indigo-600 text-sm tracking-wide"
+                  >
+                    September 2021
+                  </span>
+                  <h1
+                    class="text-2xl font-bold pt-1"
+                  >
+                    Thoughtworks
+                  </h1>
+                  <p
+                    class="text-gray-500 py-1"
+                  >
+                    UI Developer
+                  </p>
+                  <p
+                    class="pt-1"
+                  >
+                    Built a system from scratch with authentication, authorization, pagination, history with filters, admin to control all users' access on the system, user's profile and search where test coverage is &gt; 90% for one of the telecom giants in India.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative z-10"
+            >
+              <div
+                class="timeline__img p-5"
+              >
+                <span
+                  style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                >
+                  <span
+                    style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  >
+                    <img
+                      alt=""
+                      aria-hidden="true"
+                      src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2796%27%20height=%2796%27/%3e"
+                      style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    />
+                  </span>
+                  <img
+                    alt="work"
+                    data-nimg="intrinsic"
+                    decoding="async"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                  />
+                  <noscript />
+                </span>
+              </div>
+              <div
+                class="timeline__container timeline__container--left"
+              >
+                <div
+                  class="timeline__pointer timeline__pointer--left"
+                />
+                <div
+                  class="bg-white rounded-md shadow-md p-6"
+                >
+                  <span
+                    class="font-bold text-indigo-600 text-sm tracking-wide"
+                  >
+                    April 2018 - September 2021
+                  </span>
+                  <h1
+                    class="text-2xl font-bold pt-1"
+                  >
+                    IBM
+                  </h1>
+                  <p
+                    class="text-gray-500 py-1"
+                  >
+                    Application Developer
+                  </p>
+                  <p
+                    class="pt-1"
+                  >
+                    Extended the dashboard, history, forms features of the application for 3 or more regions globally. Planned and developed web applications that can be used in multiple devices, resulting in better user experience and accessibility.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="absolute bg-gray-800 bottom-0 left-0 right-0 py-6"
+    >
+      <div
+        class="bg-gray-800 py-6 text-white px-4 max-w-4xl m-auto flex flex-col space-y-8 md:space-y-0 md:flex-row lg:px-0"
+      >
+        <div
+          class="flex-1 text-center mr-4 md:text-left"
+        >
+          Let's Connect! I'd love if you reached out to me on any of the
+          platforms below. Drop me a line and I’ll get back to you ASAP!
+        </div>
+        <ul
+          class="list-none flex flex-1 space-x-4 justify-center md:justify-end"
+        >
+          <li>
+            <a
+              class="text-white"
+              href="https://twitter.com/sjsouvik"
+              target="_blank"
+            >
+              <i
+                class="bx bxl-twitter bx-sm bx-border-circle bg-gray-400 hover:bg-gray-600"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-white"
+              href="https://github.com/sjsouvik"
+              target="_blank"
+            >
+              <i
+                class="bx bxl-github bx-sm bx-border-circle bg-gray-400 hover:bg-gray-600"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-white"
+              href="https://www.linkedin.com/in/souvik-jana/"
+              target="_blank"
+            >
+              <i
+                class="bx bxl-linkedin bx-sm bx-border-circle bg-gray-400 hover:bg-gray-600"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-white"
+              href="mailto:souvikjana2013@gmail.com"
+              target="_blank"
+            >
+              <i
+                class="bx bx-envelope bx-sm bx-border-circle bg-gray-400 hover:bg-gray-600"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-white"
+              href="https://sjsouvik.medium.com"
+              target="_blank"
+            >
+              <i
+                class="bx bxl-medium bx-sm bx-border-circle bg-gray-400 hover:bg-gray-600"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</div>
+`;
