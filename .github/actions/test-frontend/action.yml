@@ -24,4 +24,4 @@ runs:
 
     - name: Test the app
       shell: bash
-      run: npm run test
+      run: npm run test:ci
