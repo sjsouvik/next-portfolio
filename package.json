@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch"
+    "test": "jest --watchAll"
   },
   "dependencies": {
     "dayjs": "^1.11.5",
