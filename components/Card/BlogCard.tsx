@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Tags } from "../index";
+import dayjs from "dayjs";
 
 export interface BlogPost {
   title: string;
@@ -25,7 +26,7 @@ const BlogCard = ({
         <article className="flex flex-col gap-4 p-4 w-full shadow-md border border-gray-200 rounded-md">
           <p className="flex items-center gap-1">
             <i className="bx bxs-calendar"></i>
-            <span>{publishedAt}</span>
+            <span>{dayjs(publishedAt).format("DD MMM, YYYY")}</span>
             <i className="ml-3 bx bxs-time-five"></i>
             <span>{readingTime}</span>
           </p>

@@ -5,6 +5,7 @@ import sharedeck from "../assets/sharedeck.png";
 import quizn from "../assets/quizn.png";
 import uiBlocks from "../assets/ui-blocks.png";
 import portfolio from "../assets/portfolio.png";
+import simplePortfolio from "../assets/simple-portfolio.png";
 
 export const timeLineData = {
   experience: [
@@ -13,7 +14,7 @@ export const timeLineData = {
       company: "Thoughtworks",
       title: "UI Developer",
       content:
-        "Built a system from scratch with authentication, authorization, pagination, history with filters, admin to control all users' access on the system, user's profile and search where test coverage is > 90% for one of the telecom giants in India.",
+        "Built a system from scratch with authentication, authorization, pagination, history with filters, admin module to control all users' access on the system, user's profile and search where test coverage is > 90% for one of the telecom giants in India.",
       timelineImageURL: experienceImageURL,
     },
     {
@@ -134,6 +135,15 @@ export const otherProjects = {
     sourceLink: "https://github.com/sjsouvik/UI-Blocks",
   },
   p6: {
+    imageLink: simplePortfolio,
+    title: "A simple portfolio",
+    content:
+      "A portfolio website which supports offline access to showcase all side-projects and blogs at one place.",
+    tags: ["HTML", "CSS", "JavaScript", "Service Worker"],
+    demoLink: "https://sjsouvik.netlify.app/",
+    sourceLink: "https://github.com/sjsouvik/Portfolio",
+  },
+  p7: {
     imageLink: portfolio,
     title: "Souvik's Portfolio",
     content:
@@ -141,16 +151,16 @@ export const otherProjects = {
     tags: [
       "NextJS",
       "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
       "Jest",
-      "React Testing Library",
       "GitHub Actions",
+      "React Testing Library",
       "HTML",
       "CSS",
-      "JavaScript",
     ],
     demoLink: "https://souvikjana.vercel.app/",
-    sourceLink:
-      "https://github.com/sjsouvik/next-portfolio/tree/next-portfolio-frontend",
+    sourceLink: "https://github.com/sjsouvik/next-portfolio",
   },
 };
 
