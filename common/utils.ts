@@ -36,7 +36,7 @@ export const getFilteredProjectsBasedOnTag = (searchTag: string) => {
 };
 
 const tagsReducer = (tagsObj: Record<string, number>, { tags }: TagsProps) => {
-  tags.forEach((tag: string) => {
+  tags?.forEach((tag: string) => {
     if (tagsObj[tag]) {
       tagsObj[tag] += 1;
     } else {
