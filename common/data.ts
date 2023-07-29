@@ -6,6 +6,7 @@ import quizn from "../assets/quizn.png";
 import uiBlocks from "../assets/ui-blocks.png";
 import portfolio from "../assets/portfolio.png";
 import simplePortfolio from "../assets/simple-portfolio.png";
+import kanban from "../assets/kanban.png";
 
 export const timeLineData = {
   experience: [
@@ -144,6 +145,16 @@ export const otherProjects = {
     sourceLink: "https://github.com/sjsouvik/Portfolio",
   },
   p7: {
+    imageLink: kanban,
+    title: "Personal Kanban board",
+    content:
+      "A personal kanban board to track progress of different tasks in hand.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    demoLink: "https://personalkanbanboard.netlify.app/",
+    sourceLink:
+      "https://github.com/sjsouvik/JavaScript-Projects/tree/main/Kanban-Board",
+  },
+  p8: {
     imageLink: portfolio,
     title: "Souvik's Portfolio",
     content:
