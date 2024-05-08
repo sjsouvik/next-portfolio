@@ -11,9 +11,17 @@ import kanban from "../assets/kanban.png";
 export const timeLineData = {
   experience: [
     {
-      date: "September 2021",
+      date: "December 2023",
+      company: "ServiceNow",
+      title: "Software Engineer",
+      content:
+        "Part of the Environmental, Social & Governance(ESG) Engineering team where currently building  solutions to make a more sustainable, equitable, and ethical future for the world.",
+      timelineImageURL: experienceImageURL,
+    },
+    {
+      date: "September 2021 - November 2023",
       company: "Thoughtworks",
-      title: "UI Developer",
+      title: "UI Developer - Senior Consultant",
       content:
         "Built a system from scratch with authentication, authorization, pagination, history with filters, admin module to control all users' access on the system, user's profile and search where test coverage is > 90% for one of the telecom giants in India.",
       timelineImageURL: experienceImageURL,

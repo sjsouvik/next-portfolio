@@ -3,10 +3,9 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="absolute bg-gray-800 bottom-0 left-0 right-0 py-6">
-      <div className="bg-gray-800 py-6 text-white px-4 max-w-4xl m-auto flex flex-col space-y-8 md:space-y-0 md:flex-row lg:px-0">
+      <div className="bg-gray-800 py-6 text-white px-4 max-w-4xl m-auto flex flex-col items-center space-y-8 md:space-y-0 md:flex-row lg:px-0">
         <div className="flex-1 text-center mr-4 md:text-left">
-          {`Let's Connect! I'd love if you reached out to me on any of the
-          platforms below. Drop me a line and I’ll get back to you ASAP!`}
+          {`I'm currently available on these platforms, let's Connect!`}
         </div>
         <ul className="list-none flex flex-1 space-x-4 justify-center md:justify-end">
           <li>
