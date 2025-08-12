@@ -11,7 +11,14 @@ import kanban from "../assets/kanban.png";
 export const timeLineData = {
   experience: [
     {
-      date: "December 2023",
+      date: "February 2025",
+      company: "Adia Health",
+      title: "Senior Frontend Engineer",
+      content: "Building Adia co-pilot which utilizes AI to process patient data, ensuring accurate and thorough diagnostic insights and other web apps to onboard customers such as labs, hospitals, doctors, etc.",
+      timelineImageURL: experienceImageURL,
+    },
+    {
+      date: "December 2023 - February 2025",
       company: "ServiceNow",
       title: "Software Engineer",
       content:
