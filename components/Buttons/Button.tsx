@@ -18,7 +18,7 @@ const Button = ({
     <Link href={href}>
       <a
         target={target}
-        className={`inline-block text-md m-4 px-8 py-3 uppercase tracking-widest rounded-full border-2 text-gray-500 border-gray-400 button__transition ${className}`}
+        className={`inline-block text-md m-4 px-8 py-3 uppercase tracking-widest rounded-full border-2 text-gray-500 dark:text-gray-300 border-gray-400 dark:border-gray-600 button__transition ${className}`}
       >
         {children}
       </a>

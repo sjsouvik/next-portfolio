@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import "highlight.js/styles/github-dark.css";
 import Head from "next/head";
+import { ThemeProvider } from "../context/ThemeContext";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,7 +13,9 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         ></link>
       </Head>
-      <Component {...pageProps} />
+      <ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }

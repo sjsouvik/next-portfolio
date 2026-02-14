@@ -10,7 +10,7 @@ const LinkButton = ({
     <Link href={href}>
       <a
         target={target}
-        className={`underline lowercase text-gray-600 decoration-gray-500 hover:text-gray-900 hover:decoration-gray-900 ${className}`}
+        className={`underline lowercase text-gray-600 dark:text-gray-400 decoration-gray-500 dark:decoration-gray-500 hover:text-gray-900 dark:hover:text-gray-200 hover:decoration-gray-900 dark:hover:decoration-gray-300 ${className}`}
       >
         {children}
       </a>

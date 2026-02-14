@@ -17,7 +17,7 @@ const Card = (props: Project) => {
 
   return (
     <div className="w-full">
-      <div className="flex flex-col h-full shadow-md border border-gray-200 rounded-md">
+      <div className="flex flex-col h-full shadow-md border border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-md">
         <div>
           <Link href={demoLink}>
             <a target="_blank">
@@ -34,12 +34,12 @@ const Card = (props: Project) => {
           </Link>
         </div>
         <div className="flex flex-col p-4 space-y-3">
-          <div className="text-2xl font-bold ">{title}</div>
+          <div className="text-2xl font-bold dark:text-white">{title}</div>
           <div style={{ minHeight: "55px" }}>
             <Tags tags={tags} />
           </div>
           <div
-            className="text-gray-500 line__clamp flex-1"
+            className="text-gray-500 dark:text-gray-400 line__clamp flex-1"
             style={{
               minHeight: "70px",
             }}

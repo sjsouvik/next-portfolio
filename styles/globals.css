@@ -6,10 +6,29 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
   min-height: 100vh;
   position: relative;
+}
+
+html.dark {
+  background-color: #111827;
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200;
 }
 
 body::after {
@@ -53,11 +72,14 @@ a {
   }
 
   .button__transition {
-    transition: border 500ms, background-color 500ms, color 500ms;
+    transition:
+      border 500ms,
+      background-color 500ms,
+      color 500ms;
   }
 
   .button__transition:hover {
-    @apply bg-gray-700 border-gray-700 text-white;
+    @apply bg-gray-700 border-gray-700 text-white dark:bg-gray-200 dark:border-gray-200 dark:text-gray-900;
   }
 
   footer {
