@@ -78,14 +78,16 @@ const Blog = (props: BlogProps) => {
         <title>{frontmatter.title} | My blog</title>
       </Head>
       <div className="md:mb-24">
-        <p className="flex items-center gap-1">
+        <p className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
           <i className="bx bxs-calendar mt-0.5"></i>
           <span>{dayjs(frontmatter.publishedAt).format("MMMM D, YYYY")}</span>
           <i className="ml-3 bx bxs-time-five mt-0.5"></i>
           <span>{frontmatter.readingTime}</span>
         </p>
-        <h1 className="text-4xl font-bold mb-8 mt-3">{frontmatter.title}</h1>
-        <div className="prose max-w-none lg:prose-xl">
+        <h1 className="text-4xl font-bold mb-8 mt-3 dark:text-white">
+          {frontmatter.title}
+        </h1>
+        <div className="prose max-w-none lg:prose-xl dark:prose-invert">
           <MDXRemote {...source} components={{ Image, CodeBlock }} />
         </div>
       </div>

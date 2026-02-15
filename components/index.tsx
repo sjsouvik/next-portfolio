@@ -11,6 +11,7 @@ export { default as TagLayout } from "./Tags/TagLayout";
 export { default as Timeline } from "./Timeline/Timeline";
 export { default as HeroHeader } from "./HeroHeader/HeroHeader";
 export { default as SectionHeading } from "./SectionHeading/SectionHeading";
+export { default as ThemeToggle } from "./ThemeToggle/ThemeToggle";
 export { default as BlogCard } from "./Card/BlogCard";
 export type { Project } from "./Card/Card";
 export type { BlogPost } from "./Card/BlogCard";

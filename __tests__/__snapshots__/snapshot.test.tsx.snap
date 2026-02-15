@@ -3,44 +3,33 @@
 exports[`Snapshot tests for all pages should render the home page properly 1`] = `
 <div>
   <nav
-    class=" z-50 fixed w-full bg-white shadow-md sm:hidden"
+    class=" z-50 fixed w-full bg-white dark:bg-gray-900 shadow-md sm:hidden"
   >
     <div
       class="flex flex-col"
     >
       <div
-        class="flex p-4"
+        class="flex p-4 items-center"
       >
         <div
-          class="flex flex-1"
+          class="flex flex-1 items-center"
         >
           <div
-            class="flex-1 text-center"
+            class="flex-1 text-center dark:text-white"
           >
             Souvik Jana
           </div>
-          <span
-            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+          <button
+            aria-label="Switch to dark mode"
+            class="flex p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
           >
-            <span
-              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-            >
-              <img
-                alt=""
-                aria-hidden="true"
-                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2720%27%20height=%2720%27/%3e"
-                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-              />
-            </span>
-            <img
-              alt="menu"
-              data-nimg="intrinsic"
-              decoding="async"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            <i
+              class="bx bx-moon bx-sm text-gray-700"
             />
-            <noscript />
-          </span>
+          </button>
+          <i
+            class="bx bx-menu bx-md ml-2 cursor-pointer dark:text-white"
+          />
         </div>
       </div>
     </div>
@@ -55,15 +44,16 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
         class="flex py-6 justify-between items-center"
       >
         <a
+          class="dark:text-white"
           href="/"
         >
           Souvik Jana
         </a>
         <ul
-          class="flex space-x-8"
+          class="flex space-x-8 items-center"
         >
           <li
-            class="navbar__item underline underline-offset-2"
+            class="navbar__item dark:text-gray-200 underline underline-offset-2"
           >
             <a
               href="/"
@@ -72,7 +62,7 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
             </a>
           </li>
           <li
-            class="navbar__item "
+            class="navbar__item dark:text-gray-200 "
           >
             <a
               href="/about"
@@ -81,7 +71,7 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
             </a>
           </li>
           <li
-            class="navbar__item "
+            class="navbar__item dark:text-gray-200 "
           >
             <a
               href="/projects"
@@ -90,7 +80,7 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
             </a>
           </li>
           <li
-            class="navbar__item "
+            class="navbar__item dark:text-gray-200 "
           >
             <a
               href="/blogs"
@@ -99,7 +89,7 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
             </a>
           </li>
           <li
-            class="navbar__item "
+            class="navbar__item dark:text-gray-200 "
           >
             <a
               href="https://instahyre-2.s3-ap-south-1.amazonaws.com/media/resume/1571848/03545cd8d7/Souvik_Jana.pdf"
@@ -107,6 +97,16 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
             >
               Resume
             </a>
+          </li>
+          <li>
+            <button
+              aria-label="Switch to dark mode"
+              class="flex p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+            >
+              <i
+                class="bx bx-moon bx-sm text-gray-700"
+              />
+            </button>
           </li>
         </ul>
       </nav>
@@ -118,41 +118,29 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
         class="pt-4 mb-24"
       >
         <h1
-          class="text-4xl font-extrabold mb-8"
+          class="flex items-center gap-4 text-4xl font-extrabold mb-8 dark:text-white"
         >
-          Hi!
-           
-          <span
-            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-          >
-            <span
-              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-            >
-              <img
-                alt=""
-                aria-hidden="true"
-                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"
-                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-              />
-            </span>
-            <img
-              alt="waving hand"
-              data-nimg="intrinsic"
-              decoding="async"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-            />
-            <noscript />
-          </span>
+          Hi! 
+          <img
+            alt="waving hand"
+            data-nimg="1"
+            decoding="async"
+            height="32"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+            style="color: transparent;"
+            width="32"
+          />
            I am Souvik Jana.
         </h1>
         <p
-          class="text-gray-500 mb-6"
+          class="text-gray-500 dark:text-gray-400 mb-6"
         >
           I want to take my passion, education, and experience to develop websites, webapps. Check out my
            
           <a
-            class="underline lowercase text-gray-600 decoration-gray-500 hover:text-gray-900 hover:decoration-gray-900 "
+            class="underline lowercase text-gray-600 dark:text-gray-400 decoration-gray-500 dark:decoration-gray-500 hover:text-gray-900 dark:hover:text-gray-200 hover:decoration-gray-900 dark:hover:decoration-gray-300 "
             href="/projects"
             target=""
           >
@@ -162,19 +150,20 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
           and my
            
           <a
-            class="underline lowercase text-gray-600 decoration-gray-500 hover:text-gray-900 hover:decoration-gray-900 "
+            class="underline lowercase text-gray-600 dark:text-gray-400 decoration-gray-500 dark:decoration-gray-500 hover:text-gray-900 dark:hover:text-gray-200 hover:decoration-gray-900 dark:hover:decoration-gray-300 "
             href="/blogs"
             target=""
           >
             blogs
           </a>
-           where I post tutorials and things that spark my curiosity.
+           
+          where I post tutorials and things that spark my curiosity.
         </p>
         <div
           class="flex justify-center"
         >
           <a
-            class="inline-block text-md m-4 px-8 py-3 uppercase tracking-widest rounded-full border-2 text-gray-500 border-gray-400 button__transition "
+            class="inline-block text-md m-4 px-8 py-3 uppercase tracking-widest rounded-full border-2 text-gray-500 dark:text-gray-300 border-gray-400 dark:border-gray-600 button__transition "
             href="/about"
             target=""
           >
@@ -186,12 +175,12 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
         class="mb-24"
       >
         <h1
-          class="text-3xl font-bold mb-4"
+          class="text-3xl font-bold mb-4 dark:text-white"
         >
           Featured Projects
         </h1>
         <p
-          class="text-gray-500 mb-6"
+          class="text-gray-500 dark:text-gray-400 mb-6"
         >
           I enjoy to continue learning to improve my knowledge and to gain a completely new experience. You'll see some of the frontend & backend projects I've accomplished.
         </p>
@@ -202,38 +191,35 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
             class="w-full"
           >
             <div
-              class="flex flex-col h-full shadow-md border border-gray-200 rounded-md"
+              class="flex flex-col h-full shadow-md border border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-md"
             >
-              <div>
+              <div
+                class="relative h-48 overflow-hidden"
+              >
                 <a
-                  href="https://videozen.netlify.app/"
+                  href="https://shopwild.netlify.app/"
                   target="_blank"
                 >
-                  <span
-                    style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
-                  >
-                    <span
-                      style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 60% 0px 0px 0px;"
-                    />
-                    <img
-                      alt=""
-                      class="rounded-t-md cursor-pointer scale-125 opacity-80 transition-opacity transition-transform duration-500 hover:opacity-100 hover:scale-110"
-                      data-nimg="responsive"
-                      decoding="async"
-                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
-                    />
-                    <noscript />
-                  </span>
+                  <img
+                    alt=""
+                    class="rounded-t-md cursor-pointer scale-125 opacity-80 transition-opacity transition-transform duration-500 hover:opacity-100 hover:scale-110"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    sizes="100vw"
+                    src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+                    srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  />
                 </a>
               </div>
               <div
                 class="flex flex-col p-4 space-y-3"
               >
                 <div
-                  class="text-2xl font-bold "
+                  class="text-2xl font-bold dark:text-white"
                 >
-                  Videozen
+                  Shopwild
                 </div>
                 <div
                   style="min-height: 55px;"
@@ -242,56 +228,56 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
                     class="flex flex-wrap items-center"
                   >
                     <li
-                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
-                    >
-                      HTML
-                    </li>
-                    <li
-                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
-                    >
-                      CSS
-                    </li>
-                    <li
-                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
-                    >
-                      JavaScript
-                    </li>
-                    <li
-                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 dark:border-gray-600 text-xs font-semibold leading-5 dark:text-gray-300"
                     >
                       ReactJS
                     </li>
                     <li
-                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 dark:border-gray-600 text-xs font-semibold leading-5 dark:text-gray-300"
                     >
                       NodeJS
                     </li>
                     <li
-                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 dark:border-gray-600 text-xs font-semibold leading-5 dark:text-gray-300"
                     >
                       ExpressJS
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 dark:border-gray-600 text-xs font-semibold leading-5 dark:text-gray-300"
+                    >
+                      MongoDB
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 dark:border-gray-600 text-xs font-semibold leading-5 dark:text-gray-300"
+                    >
+                      JWT
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 dark:border-gray-600 text-xs font-semibold leading-5 dark:text-gray-300"
+                    >
+                      Jest
                     </li>
                   </ul>
                 </div>
                 <div
-                  class="text-gray-500 line__clamp flex-1"
+                  class="text-gray-500 dark:text-gray-400 line__clamp flex-1"
                   style="min-height: 70px;"
                 >
-                  A video library that has some playlists and videos on web technologies. You can use this to learn web development, create custom playlist, add videos to watch later, check history of watched videos, search videos.
+                  An online shopping app to revolutionize your shopping where you can filter, search items, add items to wishlist, cart and place order.
                 </div>
                 <div
                   class="flex space-x-4 flex-1"
                 >
                   <a
-                    class="underline lowercase text-gray-600 decoration-gray-500 hover:text-gray-900 hover:decoration-gray-900 "
-                    href="https://videozen.netlify.app/"
+                    class="underline lowercase text-gray-600 dark:text-gray-400 decoration-gray-500 dark:decoration-gray-500 hover:text-gray-900 dark:hover:text-gray-200 hover:decoration-gray-900 dark:hover:decoration-gray-300 "
+                    href="https://shopwild.netlify.app/"
                     target="_blank"
                   >
                     Visit Site
                   </a>
                   <a
-                    class="underline lowercase text-gray-600 decoration-gray-500 hover:text-gray-900 hover:decoration-gray-900 "
-                    href="https://github.com/sjsouvik/Videozen/"
+                    class="underline lowercase text-gray-600 dark:text-gray-400 decoration-gray-500 dark:decoration-gray-500 hover:text-gray-900 dark:hover:text-gray-200 hover:decoration-gray-900 dark:hover:decoration-gray-300 "
+                    href="https://github.com/sjsouvik/shopwild"
                     target="_blank"
                   >
                     Source Code
@@ -304,38 +290,35 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
             class="w-full"
           >
             <div
-              class="flex flex-col h-full shadow-md border border-gray-200 rounded-md"
+              class="flex flex-col h-full shadow-md border border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-md"
             >
-              <div>
+              <div
+                class="relative h-48 overflow-hidden"
+              >
                 <a
-                  href="https://shopwild.netlify.app/"
+                  href="https://videozen.netlify.app/"
                   target="_blank"
                 >
-                  <span
-                    style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
-                  >
-                    <span
-                      style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 60% 0px 0px 0px;"
-                    />
-                    <img
-                      alt=""
-                      class="rounded-t-md cursor-pointer scale-125 opacity-80 transition-opacity transition-transform duration-500 hover:opacity-100 hover:scale-110"
-                      data-nimg="responsive"
-                      decoding="async"
-                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
-                    />
-                    <noscript />
-                  </span>
+                  <img
+                    alt=""
+                    class="rounded-t-md cursor-pointer scale-125 opacity-80 transition-opacity transition-transform duration-500 hover:opacity-100 hover:scale-110"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    sizes="100vw"
+                    src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+                    srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  />
                 </a>
               </div>
               <div
                 class="flex flex-col p-4 space-y-3"
               >
                 <div
-                  class="text-2xl font-bold "
+                  class="text-2xl font-bold dark:text-white"
                 >
-                  Shopwild
+                  Videozen
                 </div>
                 <div
                   style="min-height: 55px;"
@@ -344,56 +327,56 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
                     class="flex flex-wrap items-center"
                   >
                     <li
-                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
-                    >
-                      HTML
-                    </li>
-                    <li
-                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
-                    >
-                      CSS
-                    </li>
-                    <li
-                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
-                    >
-                      JavaScript
-                    </li>
-                    <li
-                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 dark:border-gray-600 text-xs font-semibold leading-5 dark:text-gray-300"
                     >
                       ReactJS
                     </li>
                     <li
-                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 dark:border-gray-600 text-xs font-semibold leading-5 dark:text-gray-300"
                     >
                       NodeJS
                     </li>
                     <li
-                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 text-xs font-semibold leading-5"
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 dark:border-gray-600 text-xs font-semibold leading-5 dark:text-gray-300"
                     >
                       ExpressJS
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 dark:border-gray-600 text-xs font-semibold leading-5 dark:text-gray-300"
+                    >
+                      MongoDB
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 dark:border-gray-600 text-xs font-semibold leading-5 dark:text-gray-300"
+                    >
+                      JWT
+                    </li>
+                    <li
+                      class="px-2.5 py-0.5 mr-2 mb-1 border rounded-full border-gray-300 dark:border-gray-600 text-xs font-semibold leading-5 dark:text-gray-300"
+                    >
+                      HTML
                     </li>
                   </ul>
                 </div>
                 <div
-                  class="text-gray-500 line__clamp flex-1"
+                  class="text-gray-500 dark:text-gray-400 line__clamp flex-1"
                   style="min-height: 70px;"
                 >
-                  An online shopping app to revolutionize your shopping where you can filter, search items, add items to wishlist, cart and place order.
+                  A video library that has some playlists and videos on web technologies. You can use this to learn web development, create custom playlist, add videos to watch later, check history of watched videos, search videos.
                 </div>
                 <div
                   class="flex space-x-4 flex-1"
                 >
                   <a
-                    class="underline lowercase text-gray-600 decoration-gray-500 hover:text-gray-900 hover:decoration-gray-900 "
-                    href="https://shopwild.netlify.app/"
+                    class="underline lowercase text-gray-600 dark:text-gray-400 decoration-gray-500 dark:decoration-gray-500 hover:text-gray-900 dark:hover:text-gray-200 hover:decoration-gray-900 dark:hover:decoration-gray-300 "
+                    href="https://videozen.netlify.app/"
                     target="_blank"
                   >
                     Visit Site
                   </a>
                   <a
-                    class="underline lowercase text-gray-600 decoration-gray-500 hover:text-gray-900 hover:decoration-gray-900 "
-                    href="https://github.com/sjsouvik/shopwild"
+                    class="underline lowercase text-gray-600 dark:text-gray-400 decoration-gray-500 dark:decoration-gray-500 hover:text-gray-900 dark:hover:text-gray-200 hover:decoration-gray-900 dark:hover:decoration-gray-300 "
+                    href="https://github.com/sjsouvik/Videozen/"
                     target="_blank"
                   >
                     Source Code
@@ -407,7 +390,7 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
           class="flex justify-center"
         >
           <a
-            class="inline-block text-md m-4 px-8 py-3 uppercase tracking-widest rounded-full border-2 text-gray-500 border-gray-400 button__transition "
+            class="inline-block text-md m-4 px-8 py-3 uppercase tracking-widest rounded-full border-2 text-gray-500 dark:text-gray-300 border-gray-400 dark:border-gray-600 button__transition "
             href="/projects"
             target=""
           >
@@ -419,81 +402,70 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
         class="mb-24"
       >
         <h1
-          class="text-3xl font-bold mb-4"
+          class="text-3xl font-bold mb-4 dark:text-white"
         >
           Work Experience
         </h1>
         <p
-          class="text-gray-500 mb-6"
+          class="text-gray-500 dark:text-gray-400 mb-6"
         >
           Work experience so far.
         </p>
         <div
-          class="antialiased p-6 bg-gray-100 text-gray-800 rounded-lg"
+          class="antialiased p-6 bg-gray-100 dark:bg-slate-700 text-gray-800 dark:text-gray-200 rounded-lg"
         >
           <div
             class="relative container mx-auto px-6 flex flex-col space-y-8"
           >
             <div
-              class="absolute z-0 inset-0 left-21 bg-white h-full w-2 shadow-md rounded-2xl md:mx-auto md:left-0 md:right:0"
+              class="absolute z-0 inset-0 left-21 bg-white dark:bg-slate-600 h-full w-2 shadow-md rounded-2xl md:mx-auto md:left-0 md:right:0"
             />
             <div
               class="relative z-10"
             >
               <div
-                class="timeline__img p-5"
+                class="timeline__img dark:bg-slate-700 dark:border-slate-500 p-5"
               >
-                <span
-                  style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-                >
-                  <span
-                    style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-                  >
-                    <img
-                      alt=""
-                      aria-hidden="true"
-                      src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2796%27%20height=%2796%27/%3e"
-                      style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-                    />
-                  </span>
-                  <img
-                    alt="work"
-                    data-nimg="intrinsic"
-                    decoding="async"
-                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                    style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-                  />
-                  <noscript />
-                </span>
+                <img
+                  alt="work"
+                  data-nimg="1"
+                  decoding="async"
+                  height="96"
+                  loading="lazy"
+                  src="/_next/image?url=https%3A%2F%2Fimg.icons8.com%2Fios-filled%2F100%2Fundefined%2Fbriefcase.png&w=256&q=75"
+                  srcset="/_next/image?url=https%3A%2F%2Fimg.icons8.com%2Fios-filled%2F100%2Fundefined%2Fbriefcase.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fimg.icons8.com%2Fios-filled%2F100%2Fundefined%2Fbriefcase.png&w=256&q=75 2x"
+                  style="color: transparent;"
+                  width="96"
+                />
               </div>
               <div
                 class="timeline__container "
               >
                 <div
-                  class="timeline__pointer "
+                  class="timeline__pointer dark:bg-slate-800 "
                 />
                 <div
-                  class="bg-white rounded-md shadow-md p-6"
+                  class="bg-white dark:bg-slate-800 dark:border dark:border-slate-700 rounded-md shadow-md p-6"
                 >
                   <span
-                    class="font-bold text-indigo-600 text-sm tracking-wide"
+                    class="font-bold text-indigo-600 dark:text-indigo-400 text-sm tracking-wide"
                   >
-                    September 2021
+                    February 2025
                   </span>
                   <h1
-                    class="text-2xl font-bold pt-1"
+                    class="text-2xl font-bold pt-1 dark:text-gray-100"
                   >
-                    Thoughtworks
+                    Adia Health
                   </h1>
                   <p
-                    class="text-gray-500 py-1"
+                    class="text-gray-500 dark:text-gray-300 py-1"
                   >
-                    UI Developer
+                    Senior Engineer III - Frontend
                   </p>
                   <p
-                    class="pt-1"
+                    class="pt-1 dark:text-gray-400"
                   >
-                    Built a system from scratch with authentication, authorization, pagination, history with filters, admin to control all users' access on the system, user's profile and search where test coverage is &gt; 90% for one of the telecom giants in India.
+                    Building Adia co-pilot which utilizes AI to process patient data, ensuring accurate and thorough diagnostic insights and other web apps to onboard customers such as labs, hospitals, doctors, etc.
                   </p>
                 </div>
               </div>
@@ -502,57 +474,146 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
               class="relative z-10"
             >
               <div
-                class="timeline__img p-5"
+                class="timeline__img dark:bg-slate-700 dark:border-slate-500 p-5"
               >
-                <span
-                  style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-                >
-                  <span
-                    style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-                  >
-                    <img
-                      alt=""
-                      aria-hidden="true"
-                      src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2796%27%20height=%2796%27/%3e"
-                      style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-                    />
-                  </span>
-                  <img
-                    alt="work"
-                    data-nimg="intrinsic"
-                    decoding="async"
-                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                    style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-                  />
-                  <noscript />
-                </span>
+                <img
+                  alt="work"
+                  data-nimg="1"
+                  decoding="async"
+                  height="96"
+                  loading="lazy"
+                  src="/_next/image?url=https%3A%2F%2Fimg.icons8.com%2Fios-filled%2F100%2Fundefined%2Fbriefcase.png&w=256&q=75"
+                  srcset="/_next/image?url=https%3A%2F%2Fimg.icons8.com%2Fios-filled%2F100%2Fundefined%2Fbriefcase.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fimg.icons8.com%2Fios-filled%2F100%2Fundefined%2Fbriefcase.png&w=256&q=75 2x"
+                  style="color: transparent;"
+                  width="96"
+                />
               </div>
               <div
                 class="timeline__container timeline__container--left"
               >
                 <div
-                  class="timeline__pointer timeline__pointer--left"
+                  class="timeline__pointer dark:bg-slate-800 timeline__pointer--left"
                 />
                 <div
-                  class="bg-white rounded-md shadow-md p-6"
+                  class="bg-white dark:bg-slate-800 dark:border dark:border-slate-700 rounded-md shadow-md p-6"
                 >
                   <span
-                    class="font-bold text-indigo-600 text-sm tracking-wide"
+                    class="font-bold text-indigo-600 dark:text-indigo-400 text-sm tracking-wide"
+                  >
+                    December 2023 - February 2025
+                  </span>
+                  <h1
+                    class="text-2xl font-bold pt-1 dark:text-gray-100"
+                  >
+                    ServiceNow
+                  </h1>
+                  <p
+                    class="text-gray-500 dark:text-gray-300 py-1"
+                  >
+                    Software Engineer II - Frontend
+                  </p>
+                  <p
+                    class="pt-1 dark:text-gray-400"
+                  >
+                    Part of the Environmental, Social & Governance(ESG) Engineering team where currently building  solutions to make a more sustainable, equitable, and ethical future for the world.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative z-10"
+            >
+              <div
+                class="timeline__img dark:bg-slate-700 dark:border-slate-500 p-5"
+              >
+                <img
+                  alt="work"
+                  data-nimg="1"
+                  decoding="async"
+                  height="96"
+                  loading="lazy"
+                  src="/_next/image?url=https%3A%2F%2Fimg.icons8.com%2Fios-filled%2F100%2Fundefined%2Fbriefcase.png&w=256&q=75"
+                  srcset="/_next/image?url=https%3A%2F%2Fimg.icons8.com%2Fios-filled%2F100%2Fundefined%2Fbriefcase.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fimg.icons8.com%2Fios-filled%2F100%2Fundefined%2Fbriefcase.png&w=256&q=75 2x"
+                  style="color: transparent;"
+                  width="96"
+                />
+              </div>
+              <div
+                class="timeline__container "
+              >
+                <div
+                  class="timeline__pointer dark:bg-slate-800 "
+                />
+                <div
+                  class="bg-white dark:bg-slate-800 dark:border dark:border-slate-700 rounded-md shadow-md p-6"
+                >
+                  <span
+                    class="font-bold text-indigo-600 dark:text-indigo-400 text-sm tracking-wide"
+                  >
+                    September 2021 - November 2023
+                  </span>
+                  <h1
+                    class="text-2xl font-bold pt-1 dark:text-gray-100"
+                  >
+                    Thoughtworks
+                  </h1>
+                  <p
+                    class="text-gray-500 dark:text-gray-300 py-1"
+                  >
+                    UI Developer - Senior Consultant
+                  </p>
+                  <p
+                    class="pt-1 dark:text-gray-400"
+                  >
+                    Built a system from scratch with authentication, authorization, pagination, history with filters, admin module to control all users' access on the system, user's profile and search where test coverage is &gt; 90% for one of the telecom giants in India.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative z-10"
+            >
+              <div
+                class="timeline__img dark:bg-slate-700 dark:border-slate-500 p-5"
+              >
+                <img
+                  alt="work"
+                  data-nimg="1"
+                  decoding="async"
+                  height="96"
+                  loading="lazy"
+                  src="/_next/image?url=https%3A%2F%2Fimg.icons8.com%2Fios-filled%2F100%2Fundefined%2Fbriefcase.png&w=256&q=75"
+                  srcset="/_next/image?url=https%3A%2F%2Fimg.icons8.com%2Fios-filled%2F100%2Fundefined%2Fbriefcase.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fimg.icons8.com%2Fios-filled%2F100%2Fundefined%2Fbriefcase.png&w=256&q=75 2x"
+                  style="color: transparent;"
+                  width="96"
+                />
+              </div>
+              <div
+                class="timeline__container timeline__container--left"
+              >
+                <div
+                  class="timeline__pointer dark:bg-slate-800 timeline__pointer--left"
+                />
+                <div
+                  class="bg-white dark:bg-slate-800 dark:border dark:border-slate-700 rounded-md shadow-md p-6"
+                >
+                  <span
+                    class="font-bold text-indigo-600 dark:text-indigo-400 text-sm tracking-wide"
                   >
                     April 2018 - September 2021
                   </span>
                   <h1
-                    class="text-2xl font-bold pt-1"
+                    class="text-2xl font-bold pt-1 dark:text-gray-100"
                   >
                     IBM
                   </h1>
                   <p
-                    class="text-gray-500 py-1"
+                    class="text-gray-500 dark:text-gray-300 py-1"
                   >
                     Application Developer
                   </p>
                   <p
-                    class="pt-1"
+                    class="pt-1 dark:text-gray-400"
                   >
                     Extended the dashboard, history, forms features of the application for 3 or more regions globally. Planned and developed web applications that can be used in multiple devices, resulting in better user experience and accessibility.
                   </p>
@@ -564,16 +625,15 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
       </section>
     </main>
     <footer
-      class="absolute bg-gray-800 bottom-0 left-0 right-0 py-6"
+      class="absolute bg-gray-800 dark:bg-gray-950 bottom-0 left-0 right-0 py-6"
     >
       <div
-        class="bg-gray-800 py-6 text-white px-4 max-w-4xl m-auto flex flex-col space-y-8 md:space-y-0 md:flex-row lg:px-0"
+        class="bg-gray-800 dark:bg-gray-950 py-6 text-white px-4 max-w-4xl m-auto flex flex-col items-center space-y-8 md:space-y-0 md:flex-row lg:px-0"
       >
         <div
           class="flex-1 text-center mr-4 md:text-left"
         >
-          Let's Connect! I'd love if you reached out to me on any of the
-          platforms below. Drop me a line and I’ll get back to you ASAP!
+          I'm currently available on these platforms, let's Connect!
         </div>
         <ul
           class="list-none flex flex-1 space-x-4 justify-center md:justify-end"
@@ -585,7 +645,7 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
               target="_blank"
             >
               <i
-                class="bx bxl-twitter bx-sm bx-border-circle bg-gray-400 hover:bg-gray-600"
+                class="bx bxl-twitter bx-sm bx-border-circle bg-gray-400 hover:bg-gray-500 dark:bg-gray-600 dark:hover:bg-gray-500"
               />
             </a>
           </li>
@@ -596,7 +656,7 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
               target="_blank"
             >
               <i
-                class="bx bxl-github bx-sm bx-border-circle bg-gray-400 hover:bg-gray-600"
+                class="bx bxl-github bx-sm bx-border-circle bg-gray-400 hover:bg-gray-500 dark:bg-gray-600 dark:hover:bg-gray-500"
               />
             </a>
           </li>
@@ -607,7 +667,7 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
               target="_blank"
             >
               <i
-                class="bx bxl-linkedin bx-sm bx-border-circle bg-gray-400 hover:bg-gray-600"
+                class="bx bxl-linkedin bx-sm bx-border-circle bg-gray-400 hover:bg-gray-500 dark:bg-gray-600 dark:hover:bg-gray-500"
               />
             </a>
           </li>
@@ -618,7 +678,7 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
               target="_blank"
             >
               <i
-                class="bx bx-envelope bx-sm bx-border-circle bg-gray-400 hover:bg-gray-600"
+                class="bx bx-envelope bx-sm bx-border-circle bg-gray-400 hover:bg-gray-500 dark:bg-gray-600 dark:hover:bg-gray-500"
               />
             </a>
           </li>
@@ -629,7 +689,7 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
               target="_blank"
             >
               <i
-                class="bx bxl-medium bx-sm bx-border-circle bg-gray-400 hover:bg-gray-600"
+                class="bx bxl-medium bx-sm bx-border-circle bg-gray-400 hover:bg-gray-500 dark:bg-gray-600 dark:hover:bg-gray-500"
               />
             </a>
           </li>

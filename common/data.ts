@@ -13,14 +13,15 @@ export const timeLineData = {
     {
       date: "February 2025",
       company: "Adia Health",
-      title: "Senior Frontend Engineer",
-      content: "Building Adia co-pilot which utilizes AI to process patient data, ensuring accurate and thorough diagnostic insights and other web apps to onboard customers such as labs, hospitals, doctors, etc.",
+      title: "Senior Engineer III - Frontend",
+      content:
+        "Building Adia co-pilot which utilizes AI to process patient data, ensuring accurate and thorough diagnostic insights and other web apps to onboard customers such as labs, hospitals, doctors, etc.",
       timelineImageURL: experienceImageURL,
     },
     {
       date: "December 2023 - February 2025",
       company: "ServiceNow",
-      title: "Software Engineer",
+      title: "Software Engineer II - Frontend",
       content:
         "Part of the Environmental, Social & Governance(ESG) Engineering team where currently building  solutions to make a more sustainable, equitable, and ethical future for the world.",
       timelineImageURL: experienceImageURL,

@@ -15,7 +15,10 @@ const IndividualSkill = ({ skillsArray }: IndividualSkillProps) => {
     <>
       {skillsArray.map((skill) => {
         return (
-          <li className="mx-6 my-1 text-gray-500" key={skill}>
+          <li
+            className="mx-6 my-1 text-gray-500 dark:text-gray-400"
+            key={skill}
+          >
             {skill}
           </li>
         );
@@ -26,8 +29,11 @@ const IndividualSkill = ({ skillsArray }: IndividualSkillProps) => {
 
 const SkillType = ({ skillsData, type }: SkillTypeProps) => {
   return (
-    <div key={type} className="py-6 border-b border-dashed border-gray-500">
-      <h2 className="text-xl">{type}</h2>
+    <div
+      key={type}
+      className="py-6 border-b border-dashed border-gray-500 dark:border-gray-600"
+    >
+      <h2 className="text-xl dark:text-white">{type}</h2>
       <ul className="list-disc flex flex-wrap">
         <IndividualSkill skillsArray={skillsData[type]} />
       </ul>

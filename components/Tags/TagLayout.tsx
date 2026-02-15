@@ -14,9 +14,13 @@ const TagLayout = ({ data, handleTagClick, selectedTag }: TagLayoutProps) => {
           return (
             <li
               key={tagName}
-              className={`m-1 text-sm px-3 py-1 border border-gray-500 rounded-full cursor-pointer hover:bg-blue-600 hover:text-white ${
-                isSelected ? "bg-blue-600 text-white" : ""
-              }`}
+              className={`m-1 text-sm px-3 py-1 border rounded-full cursor-pointer transition-colors
+                border-gray-400 dark:border-slate-500 dark:text-gray-300
+                hover:bg-blue-600 hover:text-white hover:border-blue-600 dark:hover:bg-indigo-500 dark:hover:border-indigo-500 ${
+                  isSelected
+                    ? "bg-blue-600 text-white border-blue-600 dark:bg-indigo-500 dark:border-indigo-500"
+                    : ""
+                }`}
               onClick={() => handleTagClick(tagName)}
             >
               {tagName}, {tagCount}

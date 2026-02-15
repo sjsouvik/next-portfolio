@@ -1,26 +1,30 @@
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
+import { ThemeProvider } from "../context/ThemeContext";
 import Home from "../pages";
-import { useRouter } from "next/router";
 
-jest.mock("next/router");
+jest.mock("next/router", () => ({
+  useRouter: () => ({
+    pathname: "/",
+    push: jest.fn(),
+    query: {},
+    asPath: "/",
+  }),
+}));
 
 describe("Testing the home page", () => {
-  beforeEach(() => {
-    (useRouter as jest.Mock).mockImplementation(() => ({
-      pathname: "/",
-      push: jest.fn(),
-    }));
-  });
-
   it("should render the home page", () => {
-    const { getByText, getByRole } = render(<Home />);
+    const { getByText, getByRole } = render(
+      <ThemeProvider>
+        <Home />
+      </ThemeProvider>,
+    );
 
     expect(getByText(/i am souvik jana/i)).toBeInTheDocument();
     expect(
-      getByRole("heading", { name: /featured projects/i })
+      getByRole("heading", { name: /featured projects/i }),
     ).toBeInTheDocument();
     expect(
-      getByRole("heading", { name: /work experience/i })
+      getByRole("heading", { name: /work experience/i }),
     ).toBeInTheDocument();
   });
 });

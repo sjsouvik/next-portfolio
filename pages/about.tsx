@@ -11,10 +11,9 @@ const About = () => {
           <Image
             src={profile}
             alt=""
-            width="100%"
-            height="90px"
-            layout="responsive"
-            objectFit="cover"
+            width={400}
+            height={360}
+            style={{ width: "100%", height: "auto", objectFit: "cover" }}
             className="rounded-md"
           />
         </div>

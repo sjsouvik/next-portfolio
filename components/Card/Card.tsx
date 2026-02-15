@@ -17,29 +17,25 @@ const Card = (props: Project) => {
 
   return (
     <div className="w-full">
-      <div className="flex flex-col h-full shadow-md border border-gray-200 rounded-md">
-        <div>
-          <Link href={demoLink}>
-            <a target="_blank">
-              <Image
-                src={imageLink}
-                alt=""
-                width="100%"
-                height="60px"
-                layout="responsive"
-                objectFit="cover"
-                className="rounded-t-md cursor-pointer scale-125 opacity-80 transition-opacity transition-transform duration-500 hover:opacity-100 hover:scale-110"
-              />
-            </a>
+      <div className="flex flex-col h-full shadow-md border border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-md">
+        <div className="relative h-48 overflow-hidden">
+          <Link href={demoLink} target="_blank">
+            <Image
+              src={imageLink}
+              alt=""
+              fill
+              style={{ objectFit: "cover" }}
+              className="rounded-t-md cursor-pointer scale-125 opacity-80 transition-opacity transition-transform duration-500 hover:opacity-100 hover:scale-110"
+            />
           </Link>
         </div>
         <div className="flex flex-col p-4 space-y-3">
-          <div className="text-2xl font-bold ">{title}</div>
+          <div className="text-2xl font-bold dark:text-white">{title}</div>
           <div style={{ minHeight: "55px" }}>
             <Tags tags={tags} />
           </div>
           <div
-            className="text-gray-500 line__clamp flex-1"
+            className="text-gray-500 dark:text-gray-400 line__clamp flex-1"
             style={{
               minHeight: "70px",
             }}

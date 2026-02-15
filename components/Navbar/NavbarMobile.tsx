@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { navData } from "./data";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 interface NavbarContentProps {
   onToggle: () => void;
@@ -19,29 +19,27 @@ const NavbarMobile = () => {
     <nav
       className={`${
         showMenu ? "top-0 bottom-0" : ""
-      } z-50 fixed w-full bg-white shadow-md sm:hidden`}
+      } z-50 fixed w-full bg-white dark:bg-gray-900 shadow-md sm:hidden`}
     >
       <div className="flex flex-col">
-        <div className="flex p-4">
+        <div className="flex p-4 items-center">
           {showMenu ? (
-            <div className="flex-1 text-right" onClick={handleMenu}>
-              <Image
-                src="https://img.icons8.com/material-outlined/24/undefined/delete-sign.png"
-                height="20"
-                width="20"
-                alt="close"
-              />
+            <div
+              className="flex-1 text-right dark:text-white"
+              onClick={handleMenu}
+            >
+              <i className="bx bx-x bx-md cursor-pointer"></i>
             </div>
           ) : (
-            <div className="flex flex-1">
-              <div className="flex-1 text-center">Souvik Jana</div>
-              <Image
-                src="https://img.icons8.com/material-outlined/24/undefined/menu--v3.png"
-                height="20"
-                width="20"
-                alt="menu"
+            <div className="flex flex-1 items-center">
+              <div className="flex-1 text-center dark:text-white">
+                Souvik Jana
+              </div>
+              <ThemeToggle />
+              <i
+                className="bx bx-menu bx-md ml-2 cursor-pointer dark:text-white"
                 onClick={handleMenu}
-              />
+              ></i>
             </div>
           )}
         </div>
@@ -62,14 +60,12 @@ const NavbarContent = ({ onToggle }: NavbarContentProps) => {
           return (
             <li
               key={name}
-              className={`list-none m-4 text-xl font-bold ${
+              className={`list-none m-4 text-xl font-bold dark:text-white ${
                 router.pathname === route ? "underline underline-offset-4" : ""
               }`}
             >
-              <Link href={route}>
-                <a onClick={onToggle} target={target}>
-                  {component}
-                </a>
+              <Link href={route} onClick={onToggle} target={target}>
+                {component}
               </Link>
             </li>
           );
