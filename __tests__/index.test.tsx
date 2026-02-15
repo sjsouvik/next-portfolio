@@ -24,7 +24,7 @@ describe("Testing the home page", () => {
       getByRole("heading", { name: /featured projects/i }),
     ).toBeInTheDocument();
     expect(
-      getByRole("heading", { name: /work experience/i }),
+      getByRole("heading", { name: /work experiencee/i }),
     ).toBeInTheDocument();
   });
 });
