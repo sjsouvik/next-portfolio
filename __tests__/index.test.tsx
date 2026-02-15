@@ -1,18 +1,17 @@
-import { fireEvent, render } from "@testing-library/react";
-import Home from "../pages";
+import { render } from "@testing-library/react";
 import { ThemeProvider } from "../context/ThemeContext";
-import { useRouter } from "next/router";
+import Home from "../pages";
 
-jest.mock("next/router");
+jest.mock("next/router", () => ({
+  useRouter: () => ({
+    pathname: "/",
+    push: jest.fn(),
+    query: {},
+    asPath: "/",
+  }),
+}));
 
 describe("Testing the home page", () => {
-  beforeEach(() => {
-    (useRouter as jest.Mock).mockImplementation(() => ({
-      pathname: "/",
-      push: jest.fn(),
-    }));
-  });
-
   it("should render the home page", () => {
     const { getByText, getByRole } = render(
       <ThemeProvider>

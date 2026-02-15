@@ -1,17 +1,17 @@
 import { render } from "@testing-library/react";
-import Home from "../pages";
-import { useRouter } from "next/router";
 import { ThemeProvider } from "../context/ThemeContext";
+import Home from "../pages";
 
-jest.mock("next/router");
+jest.mock("next/router", () => ({
+  useRouter: () => ({
+    pathname: "/",
+    push: jest.fn(),
+    query: {},
+    asPath: "/",
+  }),
+}));
 
 describe("Snapshot tests for all pages", () => {
-  beforeEach(() => {
-    (useRouter as jest.Mock).mockImplementation(() => ({
-      pathname: "/",
-    }));
-  });
-
   it("should render the home page properly", () => {
     const { container } = render(
       <ThemeProvider>
