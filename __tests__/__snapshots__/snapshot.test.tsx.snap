@@ -412,19 +412,19 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
           Work experience so far.
         </p>
         <div
-          class="antialiased p-6 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-lg"
+          class="antialiased p-6 bg-gray-100 dark:bg-slate-700 text-gray-800 dark:text-gray-200 rounded-lg"
         >
           <div
             class="relative container mx-auto px-6 flex flex-col space-y-8"
           >
             <div
-              class="absolute z-0 inset-0 left-21 bg-white dark:bg-gray-700 h-full w-2 shadow-md rounded-2xl md:mx-auto md:left-0 md:right:0"
+              class="absolute z-0 inset-0 left-21 bg-white dark:bg-slate-600 h-full w-2 shadow-md rounded-2xl md:mx-auto md:left-0 md:right:0"
             />
             <div
               class="relative z-10"
             >
               <div
-                class="timeline__img dark:bg-gray-700 dark:border-gray-600 p-5"
+                class="timeline__img dark:bg-slate-700 dark:border-slate-500 p-5"
               >
                 <img
                   alt="work"
@@ -442,10 +442,10 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
                 class="timeline__container "
               >
                 <div
-                  class="timeline__pointer dark:bg-gray-700 "
+                  class="timeline__pointer dark:bg-slate-800 "
                 />
                 <div
-                  class="bg-white dark:bg-gray-700 rounded-md shadow-md p-6"
+                  class="bg-white dark:bg-slate-800 dark:border dark:border-slate-700 rounded-md shadow-md p-6"
                 >
                   <span
                     class="font-bold text-indigo-600 dark:text-indigo-400 text-sm tracking-wide"
@@ -453,17 +453,17 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
                     February 2025
                   </span>
                   <h1
-                    class="text-2xl font-bold pt-1 dark:text-white"
+                    class="text-2xl font-bold pt-1 dark:text-gray-100"
                   >
                     Adia Health
                   </h1>
                   <p
-                    class="text-gray-500 dark:text-gray-400 py-1"
+                    class="text-gray-500 dark:text-gray-300 py-1"
                   >
-                    Senior Frontend Engineer
+                    Senior Engineer III - Frontend
                   </p>
                   <p
-                    class="pt-1 dark:text-gray-300"
+                    class="pt-1 dark:text-gray-400"
                   >
                     Building Adia co-pilot which utilizes AI to process patient data, ensuring accurate and thorough diagnostic insights and other web apps to onboard customers such as labs, hospitals, doctors, etc.
                   </p>
@@ -474,7 +474,7 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
               class="relative z-10"
             >
               <div
-                class="timeline__img dark:bg-gray-700 dark:border-gray-600 p-5"
+                class="timeline__img dark:bg-slate-700 dark:border-slate-500 p-5"
               >
                 <img
                   alt="work"
@@ -492,10 +492,10 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
                 class="timeline__container timeline__container--left"
               >
                 <div
-                  class="timeline__pointer dark:bg-gray-700 timeline__pointer--left"
+                  class="timeline__pointer dark:bg-slate-800 timeline__pointer--left"
                 />
                 <div
-                  class="bg-white dark:bg-gray-700 rounded-md shadow-md p-6"
+                  class="bg-white dark:bg-slate-800 dark:border dark:border-slate-700 rounded-md shadow-md p-6"
                 >
                   <span
                     class="font-bold text-indigo-600 dark:text-indigo-400 text-sm tracking-wide"
@@ -503,17 +503,17 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
                     December 2023 - February 2025
                   </span>
                   <h1
-                    class="text-2xl font-bold pt-1 dark:text-white"
+                    class="text-2xl font-bold pt-1 dark:text-gray-100"
                   >
                     ServiceNow
                   </h1>
                   <p
-                    class="text-gray-500 dark:text-gray-400 py-1"
+                    class="text-gray-500 dark:text-gray-300 py-1"
                   >
-                    Software Engineer
+                    Software Engineer II - Frontend
                   </p>
                   <p
-                    class="pt-1 dark:text-gray-300"
+                    class="pt-1 dark:text-gray-400"
                   >
                     Part of the Environmental, Social & Governance(ESG) Engineering team where currently building  solutions to make a more sustainable, equitable, and ethical future for the world.
                   </p>
@@ -524,7 +524,7 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
               class="relative z-10"
             >
               <div
-                class="timeline__img dark:bg-gray-700 dark:border-gray-600 p-5"
+                class="timeline__img dark:bg-slate-700 dark:border-slate-500 p-5"
               >
                 <img
                   alt="work"
@@ -542,10 +542,10 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
                 class="timeline__container "
               >
                 <div
-                  class="timeline__pointer dark:bg-gray-700 "
+                  class="timeline__pointer dark:bg-slate-800 "
                 />
                 <div
-                  class="bg-white dark:bg-gray-700 rounded-md shadow-md p-6"
+                  class="bg-white dark:bg-slate-800 dark:border dark:border-slate-700 rounded-md shadow-md p-6"
                 >
                   <span
                     class="font-bold text-indigo-600 dark:text-indigo-400 text-sm tracking-wide"
@@ -553,17 +553,17 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
                     September 2021 - November 2023
                   </span>
                   <h1
-                    class="text-2xl font-bold pt-1 dark:text-white"
+                    class="text-2xl font-bold pt-1 dark:text-gray-100"
                   >
                     Thoughtworks
                   </h1>
                   <p
-                    class="text-gray-500 dark:text-gray-400 py-1"
+                    class="text-gray-500 dark:text-gray-300 py-1"
                   >
                     UI Developer - Senior Consultant
                   </p>
                   <p
-                    class="pt-1 dark:text-gray-300"
+                    class="pt-1 dark:text-gray-400"
                   >
                     Built a system from scratch with authentication, authorization, pagination, history with filters, admin module to control all users' access on the system, user's profile and search where test coverage is &gt; 90% for one of the telecom giants in India.
                   </p>
@@ -574,7 +574,7 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
               class="relative z-10"
             >
               <div
-                class="timeline__img dark:bg-gray-700 dark:border-gray-600 p-5"
+                class="timeline__img dark:bg-slate-700 dark:border-slate-500 p-5"
               >
                 <img
                   alt="work"
@@ -592,10 +592,10 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
                 class="timeline__container timeline__container--left"
               >
                 <div
-                  class="timeline__pointer dark:bg-gray-700 timeline__pointer--left"
+                  class="timeline__pointer dark:bg-slate-800 timeline__pointer--left"
                 />
                 <div
-                  class="bg-white dark:bg-gray-700 rounded-md shadow-md p-6"
+                  class="bg-white dark:bg-slate-800 dark:border dark:border-slate-700 rounded-md shadow-md p-6"
                 >
                   <span
                     class="font-bold text-indigo-600 dark:text-indigo-400 text-sm tracking-wide"
@@ -603,17 +603,17 @@ exports[`Snapshot tests for all pages should render the home page properly 1`] =
                     April 2018 - September 2021
                   </span>
                   <h1
-                    class="text-2xl font-bold pt-1 dark:text-white"
+                    class="text-2xl font-bold pt-1 dark:text-gray-100"
                   >
                     IBM
                   </h1>
                   <p
-                    class="text-gray-500 dark:text-gray-400 py-1"
+                    class="text-gray-500 dark:text-gray-300 py-1"
                   >
                     Application Developer
                   </p>
                   <p
-                    class="pt-1 dark:text-gray-300"
+                    class="pt-1 dark:text-gray-400"
                   >
                     Extended the dashboard, history, forms features of the application for 3 or more regions globally. Planned and developed web applications that can be used in multiple devices, resulting in better user experience and accessibility.
                   </p>
