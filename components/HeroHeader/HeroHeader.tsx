@@ -6,9 +6,8 @@ import Button from "../Buttons/Button";
 const HeroHeader = () => {
   return (
     <div className="pt-4 mb-24">
-      <h1 className="text-4xl font-extrabold mb-8 dark:text-white">
-        Hi!{" "}
-        <Image src={HeroImage} width="32px" height="32px" alt="waving hand" /> I
+      <h1 className="flex items-center gap-4 text-4xl font-extrabold mb-8 dark:text-white">
+        Hi! <Image src={HeroImage} width={32} height={32} alt="waving hand" /> I
         am Souvik Jana.
       </h1>
       <p className="text-gray-500 dark:text-gray-400 mb-6">

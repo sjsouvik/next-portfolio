@@ -18,19 +18,15 @@ const Card = (props: Project) => {
   return (
     <div className="w-full">
       <div className="flex flex-col h-full shadow-md border border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-md">
-        <div>
-          <Link href={demoLink}>
-            <a target="_blank">
-              <Image
-                src={imageLink}
-                alt=""
-                width="100%"
-                height="60px"
-                layout="responsive"
-                objectFit="cover"
-                className="rounded-t-md cursor-pointer scale-125 opacity-80 transition-opacity transition-transform duration-500 hover:opacity-100 hover:scale-110"
-              />
-            </a>
+        <div className="relative h-48 overflow-hidden">
+          <Link href={demoLink} target="_blank">
+            <Image
+              src={imageLink}
+              alt=""
+              fill
+              style={{ objectFit: "cover" }}
+              className="rounded-t-md cursor-pointer scale-125 opacity-80 transition-opacity transition-transform duration-500 hover:opacity-100 hover:scale-110"
+            />
           </Link>
         </div>
         <div className="flex flex-col p-4 space-y-3">

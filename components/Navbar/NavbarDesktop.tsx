@@ -9,8 +9,8 @@ const NavbarDesktop = () => {
   return (
     <div className="hidden sm:block">
       <nav className="flex py-6 justify-between items-center">
-        <Link href="/">
-          <a className="dark:text-white">Souvik Jana</a>
+        <Link href="/" className="dark:text-white">
+          Souvik Jana
         </Link>
         <ul className="flex space-x-8 items-center">
           {navData.map(({ name, component, route, target }) => (
@@ -20,8 +20,8 @@ const NavbarDesktop = () => {
                 router.pathname === route ? "underline underline-offset-2" : ""
               }`}
             >
-              <Link href={route}>
-                <a target={target}>{component}</a>
+              <Link href={route} target={target}>
+                {component}
               </Link>
             </li>
           ))}

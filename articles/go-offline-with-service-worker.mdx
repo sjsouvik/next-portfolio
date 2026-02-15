@@ -7,10 +7,10 @@ excerpt: "A JavaScript asset that acts as a proxy between browser and server. If
 
 <Image
   src="/service-worker.jpg"
-  width="100%"
-  height="70px"
-  layout="responsive"
+  width="1000"
+  height="500"
   alt=""
+  style={{ width: "100%", height: "70px" }}
 />
 
 The only motivation I had behind learning service workers was to access an app offline, so we'll know and understand how to do that using a simple demo project.
@@ -61,7 +61,7 @@ function initServiceWorker() {
     .register("sw.js")
     .then(() => console.log("Service worker is registered successfully"))
     .catch((error) =>
-      console.error(`failed to register service worker, error: ${error}`)
+      console.error(`failed to register service worker, error: ${error}`),
     );
 }
 ```
@@ -111,7 +111,7 @@ self.addEventListener("install", (event) => {
         console.log("Caching assets");
         cache.addAll(cacheAssets);
       })
-      .then(() => self.skipWaiting())
+      .then(() => self.skipWaiting()),
   );
 });
 ```
@@ -152,7 +152,7 @@ self.addEventListener("activate", (event) => {
           caches.delete(cache);
         }
       });
-    })
+    }),
   );
 });
 ```
@@ -171,7 +171,7 @@ As of now, we have registered a service worker, and added different events to ca
 self.addEventListener("fetch", (event) => {
   console.log("Fetching via Service worker");
   event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request))
+    fetch(event.request).catch(() => caches.match(event.request)),
   );
 });
 ```
@@ -210,7 +210,7 @@ self.addEventListener("install", (event) => {
         console.log("Caching assets");
         cache.addAll(cacheAssets);
       })
-      .then(() => self.skipWaiting())
+      .then(() => self.skipWaiting()),
   );
 });
 
@@ -226,14 +226,14 @@ self.addEventListener("activate", (event) => {
           caches.delete(cache);
         }
       });
-    })
+    }),
   );
 });
 
 self.addEventListener("fetch", (event) => {
   console.log("Fetching via Service worker");
   event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request))
+    fetch(event.request).catch(() => caches.match(event.request)),
   );
 });
 ```
@@ -257,7 +257,7 @@ self.addEventListener("fetch", (event) => {
 
         return res;
       })
-      .catch(() => caches.match(event.request))
+      .catch(() => caches.match(event.request)),
   );
 });
 ```
@@ -282,7 +282,7 @@ self.addEventListener("fetch", (event) => {
     caches
       .open(cacheName)
       .then((cache) => cache.match(event.request))
-      .catch(() => fetch(event.request))
+      .catch(() => fetch(event.request)),
   );
 });
 ```
@@ -295,8 +295,8 @@ Go to the network first to get the resource, if that fails then try to access it
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     fetch(event.request).catch(() =>
-      caches.open(cacheName).then((cache) => cache.match(event.request))
-    )
+      caches.open(cacheName).then((cache) => cache.match(event.request)),
+    ),
   );
 });
 ```
@@ -321,7 +321,7 @@ self.addEventListener("fetch", (event) => {
 
         return cachedResponse || fetchedResponse;
       });
-    })
+    }),
   );
 });
 ```

@@ -7,9 +7,8 @@ excerpt: "There're a few metrics known as Web Vitals to measure the performance 
 
 <Image
   src="/performance.jpg"
-  width="100%"
-  height="60px"
-  layout="responsive"
+  width="900"
+  height="480"
   alt="time lapse photography of man riding bicycle"
 />
 
@@ -62,7 +61,6 @@ Earlier we had the `src` attribute for images, but now we also have `srcset` whi
 ```
 
 - Reduce request overhead
-
   - We can use http/2 for reducing overhead which is faster, can help us to reuse connections if we're downloading resources multiple times from a server by removing TCP connection and SSL handshake for each request. But, http/2 is not supported by all servers and requires SSL certification to work which is difficult to set up locally.
 
   - Caching requests could be another approach to reduce request overhead. In this approach, we don't have to do a DNS lookup, TCP connection, SSL handshake, request, response - just take the resource and process it as the browser has it already. But, this can only happen from the 2nd time, for the 1st time, it would download everything required. We can use 3 tags to tell the browser to keep these resources for a particular amount of time - `cache control`, `expires`, `etag`.

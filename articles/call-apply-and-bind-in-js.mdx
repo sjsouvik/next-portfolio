@@ -14,9 +14,8 @@ excerpt: "`this` keyword in JS generally points to the object that the function 
 
 <Image
   src="/call.jpg"
-  width="100%"
-  height="130px"
-  layout="responsive"
+  width="900"
+  height="600"
   alt="person holding black rotary telephone receiver"
 />
 
@@ -112,7 +111,7 @@ We might need to pass some extra argument to the function as well. We can do tha
 ```javascript
 function printActivity(months, days) {
   console.log(
-    "Learning " + this.technology + "since " + months + " and " + days
+    "Learning " + this.technology + "since " + months + " and " + days,
   );
 }
 
@@ -127,7 +126,7 @@ The `apply()` method is similar to the `call()` method. The only difference is t
 ```javascript
 function printActivity(months, days) {
   console.log(
-    "Learning " + this.technology + "since " + months + " and " + days
+    "Learning " + this.technology + "since " + months + " and " + days,
   );
 }
 

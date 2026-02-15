@@ -64,10 +64,8 @@ const NavbarContent = ({ onToggle }: NavbarContentProps) => {
                 router.pathname === route ? "underline underline-offset-4" : ""
               }`}
             >
-              <Link href={route}>
-                <a onClick={onToggle} target={target}>
-                  {component}
-                </a>
+              <Link href={route} onClick={onToggle} target={target}>
+                {component}
               </Link>
             </li>
           );
