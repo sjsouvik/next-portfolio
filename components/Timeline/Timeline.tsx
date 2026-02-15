@@ -14,9 +14,9 @@ interface TimelineProps {
 
 const Timeline = ({ timeline }: TimelineProps) => {
   return (
-    <div className="antialiased p-6 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-lg">
+    <div className="antialiased p-6 bg-gray-100 dark:bg-slate-700 text-gray-800 dark:text-gray-200 rounded-lg">
       <div className="relative container mx-auto px-6 flex flex-col space-y-8">
-        <div className="absolute z-0 inset-0 left-21 bg-white dark:bg-gray-700 h-full w-2 shadow-md rounded-2xl md:mx-auto md:left-0 md:right:0"></div>
+        <div className="absolute z-0 inset-0 left-21 bg-white dark:bg-slate-600 h-full w-2 shadow-md rounded-2xl md:mx-auto md:left-0 md:right:0"></div>
         {timeline?.map((timelineItem, index) => {
           const { date, company, title, content, timelineImageURL } =
             timelineItem;
@@ -24,7 +24,7 @@ const Timeline = ({ timeline }: TimelineProps) => {
 
           return (
             <div key={date} className="relative z-10">
-              <div className="timeline__img dark:bg-gray-700 dark:border-gray-600 p-5">
+              <div className="timeline__img dark:bg-slate-700 dark:border-slate-500 p-5">
                 <Image
                   src={timelineImageURL}
                   alt="work"
@@ -38,21 +38,21 @@ const Timeline = ({ timeline }: TimelineProps) => {
                 }`}
               >
                 <div
-                  className={`timeline__pointer dark:bg-gray-700 ${
+                  className={`timeline__pointer dark:bg-slate-800 ${
                     isIndexOdd ? "timeline__pointer--left" : ""
                   }`}
                 ></div>
-                <div className="bg-white dark:bg-gray-700 rounded-md shadow-md p-6">
+                <div className="bg-white dark:bg-slate-800 dark:border dark:border-slate-700 rounded-md shadow-md p-6">
                   <span className="font-bold text-indigo-600 dark:text-indigo-400 text-sm tracking-wide">
                     {date}
                   </span>
-                  <h1 className="text-2xl font-bold pt-1 dark:text-white">
+                  <h1 className="text-2xl font-bold pt-1 dark:text-gray-100">
                     {company}
                   </h1>
-                  <p className="text-gray-500 dark:text-gray-400 py-1">
+                  <p className="text-gray-500 dark:text-gray-300 py-1">
                     {title}
                   </p>
-                  <p className="pt-1 dark:text-gray-300">{content}</p>
+                  <p className="pt-1 dark:text-gray-400">{content}</p>
                 </div>
               </div>
             </div>
