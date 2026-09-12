@@ -31,7 +31,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
       setTheme(storedTheme);
     } else {
       const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
+        "(prefers-color-scheme: dark)",
       ).matches;
       setTheme(prefersDark ? "dark" : "light");
     }
@@ -56,11 +56,6 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
 
-  // Prevent flash of incorrect theme
-  if (!mounted) {
-    return null;
-  }
-
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
@@ -75,4 +70,3 @@ export const useTheme = (): ThemeContextType => {
   }
   return context;
 };
-
