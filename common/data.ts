@@ -11,11 +11,19 @@ import kanban from "../assets/kanban.png";
 export const timeLineData = {
   experience: [
     {
-      date: "February 2025",
-      company: "Adia Health",
-      title: "Senior Engineer III - Frontend",
+      date: "January 2026",
+      company: "Egnyte",
+      title: "Senior Software Engineer - Frontend",
       content:
-        "Building Adia co-pilot which utilizes AI to process patient data, ensuring accurate and thorough diagnostic insights and other web apps to onboard customers such as labs, hospitals, doctors, etc.",
+        "Building agentic search experience - transforming traditional keyword search into an agentic, natural language interface capable of multi-step reasoning across enterprise data repositories at Egnyte.",
+      timelineImageURL: experienceImageURL,
+    },
+    {
+      date: "February 2025 - January 2026",
+      company: "Adia Health",
+      title: "Software Engineer III - Frontend",
+      content:
+        "Built Adia co-pilot for doctors which utilizes AI to process patient data, ensuring accurate and thorough diagnostic insights which is being used by 30+ providers actively, serving thousands of patients and other web apps to onboard customers such as labs, hospitals, doctors, etc.",
       timelineImageURL: experienceImageURL,
     },
     {
