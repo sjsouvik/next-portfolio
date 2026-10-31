@@ -6,8 +6,7 @@ export const navData = [
   {
     name: "Resume",
     component: "Resume",
-    route:
-      "https://instahyre-2.s3-ap-south-1.amazonaws.com/media/resume/1571848/03545cd8d7/Souvik_Jana.pdf",
+    route: "https://e-resume.vercel.app/builder/EWsaHT9nQFkz90vIS2THk",
     target: "_blank",
   },
 ];
